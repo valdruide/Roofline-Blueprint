@@ -20,6 +20,7 @@ header {
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+      background-attachment: fixed;
       padding-right: 10vw;
       padding-left: 10vw;
 }
