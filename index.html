@@ -49,31 +49,31 @@
                                     <p class="form_sous_titre">Extension(s) complémentaire(s)</p>
                                     <div class="checkBox_row">
                                           <div class="checkBox">
-                                                <input type="checkbox" name="extension[]" id="fr" value=".fr" />
+                                                <input type="checkbox" name="extension" id="fr" value=".fr" />
                                                 <label for="fr" class="form-control">.fr</label>
                                           </div>
                                           <div class="checkBox">
-                                                <input type="checkbox" name="extension[]" id="be" value=".be" />
+                                                <input type="checkbox" name="extension" id="be" value=".be" />
                                                 <label for="be" class="form-control">.be</label>
                                           </div>
                                           <div class="checkBox">
-                                                <input type="checkbox" name="extension[]" id="com" value=".com" />
+                                                <input type="checkbox" name="extension" id="com" value=".com" />
                                                 <label for="com" class="form-control">.com</label>
                                           </div>
                                           <div class="checkBox">
-                                                <input type="checkbox" name="extension[]" id="org" value=".org" />
+                                                <input type="checkbox" name="extension" id="org" value=".org" />
                                                 <label for="org" class="form-control">.org</label>
                                           </div>
                                           <div class="checkBox">
-                                                <input type="checkbox" name="extension[]" id="net" value=".net" />
+                                                <input type="checkbox" name="extension" id="net" value=".net" />
                                                 <label for="net" class="form-control">.net</label>
                                           </div>
                                           <div class="checkBox">
-                                                <input type="checkbox" name="extension[]" id="es" value=".es" />
+                                                <input type="checkbox" name="extension" id="es" value=".es" />
                                                 <label for="es" class="form-control">.es</label>
                                           </div>
                                           <div class="checkBox">
-                                                <input type="checkbox" name="extension[]" id="en" value=".en" />
+                                                <input type="checkbox" name="extension" id="en" value=".en" />
                                                 <label for="en" class="form-control">.en</label>
                                           </div>
                                     </div>
@@ -441,13 +441,50 @@
                                     onclick="$(function () { 
                                         window.jsPDF = window.jspdf.jsPDF;
                                         let doc = new jsPDF()
-                                        doc.text('Nom du site: \t\t\t'+document.querySelector(`#nomSite`).value, 5, 10)
-                                        doc.text('Thématique du site: \t\t\t'+document.querySelector(`#themeSite`).value, 5, 20)
-                                        let descTxt = $('#descSite').val();
-                                        doc.text('Description: \t\t\t'+descTxt, 5, 30)
-                                        doc.text('URL du site: \t\t\t'+document.querySelector(`#adrSite`).value, 5, 40)
+                                        doc.setFillColor(32, 53, 86);
+                                        doc.rect(0, 0, 250, 260, 'F');
+                                        doc.setTextColor(96, 255, 128);
+                                        doc.setFontSize(35)
+                                        doc.setFont(undefined, 'bold')
+                                        doc.text('Cahier des charges', 108, 20, 'center')
                                         
-                                        doc.save('a4.pdf')
+                                        doc.setFontSize(13)
+                                        doc.setFont(undefined, 'normal')
+                                        doc.setFillColor(24, 36, 54);
+                                        doc.rect(0, 32, 250, 10, 'F');
+                                        doc.text('Présentation du site', 5, 40)
+                                        
+                                        doc.setTextColor(255, 255, 255);
+                                        doc.text('Nom du site: '+document.querySelector(`#nomSite`).value, 5, 50)
+                                        doc.text('Thématique du site: '+document.querySelector(`#themeSite`).value, 5, 57)
+
+                                        let descTxt = $('#descSite').val();
+                                        doc.text('Description: '+descTxt, 5, 64)
+
+                                        doc.text('URL du site: '+document.querySelector(`#adrSite`).value, 5, 71)
+                                        
+                                        let checkedExtension = document.getElementsByName('extension');
+                                        let checkedExtensionChecked = [];
+                                        let extensionValues = '';
+                                        for(let i=0; i<checkedExtension.length; i++){
+                                            if(checkedExtension[i].checked){
+                                                checkedExtensionChecked.push(checkedExtension[i]);
+                                                let cval = checkedExtension[i].value+', ';
+                                                extensionValues = extensionValues + cval;
+                                            }
+                                        }
+                                        doc.text('Extension(s) complémentaire(s): '+extensionValues, 5, 78)
+                                        doc.text('Autre(s): '+document.querySelector(`#autreExt`).value, 5, 85)
+
+                                        doc.setTextColor(96, 255, 128);
+                                        doc.setFillColor(24, 36, 54);
+                                        doc.rect(0, 91, 250, 10, 'F');
+                                        doc.text('Objectifs du site', 5, 99)
+                                        
+                                        doc.setTextColor(255, 255, 255);
+
+                                        doc.save('Cahier des charges '+document.querySelector(`#nomSite`).value+'.pdf')
+                                        window.close()
                                     });"
                               />
                         </form>
