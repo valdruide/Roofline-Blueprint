@@ -1,0 +1,55 @@
+:root {
+      --mainColor: #60ff80;
+      --secondaryColor: #182436;
+}
+
+body {
+      background-color: #203556;
+}
+
+header {
+      height: 60vh;
+      background-color: var(--secondaryColor);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-image: url('../imgs/Blueprint-background.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      padding-right: 10vw;
+      padding-left: 10vw;
+}
+
+h1 {
+      font-family: 'monument_extendedUltraBold', sans-serif;
+      font-size: 5rem;
+      margin: 0;
+}
+
+h1 span {
+      font-family: 'monument_extendedUltraBold', sans-serif;
+      color: var(--mainColor);
+}
+
+header h2 {
+      font-size: 2.5rem;
+      margin: 0;
+}
+
+header img {
+      width: 100%;
+}
+
+.info_section {
+      margin-top: 80px;
+}
+
+.info_section h2 {
+      font-size: 2.3rem;
+      color: var(--mainColor);
+}
+.info_section p {
+      font-size: 19px;
+      text-align: justify;
+}
