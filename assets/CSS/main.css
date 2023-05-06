@@ -5,6 +5,9 @@
 
 body {
       background-color: #203556;
+      background-image: url('../imgs/grid2.svg');
+      background-position: center;
+      background-attachment: fixed;
 }
 
 header {
@@ -42,7 +45,8 @@ header img {
 }
 
 .info_section {
-      margin-top: 80px;
+      background-color: #182436;
+      padding: 60px 10vw;
 }
 
 .info_section h2 {

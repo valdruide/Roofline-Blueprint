@@ -36,7 +36,7 @@
             <section class="form_section">
                   <div class="form_container" id="editor">
                         <h3>Informations sur votre projet</h3>
-                        <form action="" method="post" target="_blank" id="content">
+                        <form action="generate.php" method="post" target="_blank" id="content">
                               <div class="formBox">
                                     <p class="formTitre titre1">Présentation du projet</p>
                                     <hr />
@@ -49,31 +49,31 @@
                                     <p class="form_sous_titre">Extension(s) complémentaire(s)</p>
                                     <div class="checkBox_row">
                                           <div class="checkBox">
-                                                <input type="checkbox" name="extension" id="fr" value=".fr" />
+                                                <input type="checkbox" name="extension[]" id="fr" value=".fr" />
                                                 <label for="fr" class="form-control">.fr</label>
                                           </div>
                                           <div class="checkBox">
-                                                <input type="checkbox" name="extension" id="be" value=".be" />
+                                                <input type="checkbox" name="extension[]" id="be" value=".be" />
                                                 <label for="be" class="form-control">.be</label>
                                           </div>
                                           <div class="checkBox">
-                                                <input type="checkbox" name="extension" id="com" value=".com" />
+                                                <input type="checkbox" name="extension[]" id="com" value=".com" />
                                                 <label for="com" class="form-control">.com</label>
                                           </div>
                                           <div class="checkBox">
-                                                <input type="checkbox" name="extension" id="org" value=".org" />
+                                                <input type="checkbox" name="extension[]" id="org" value=".org" />
                                                 <label for="org" class="form-control">.org</label>
                                           </div>
                                           <div class="checkBox">
-                                                <input type="checkbox" name="extension" id="net" value=".net" />
+                                                <input type="checkbox" name="extension[]" id="net" value=".net" />
                                                 <label for="net" class="form-control">.net</label>
                                           </div>
                                           <div class="checkBox">
-                                                <input type="checkbox" name="extension" id="es" value=".es" />
+                                                <input type="checkbox" name="extension[]" id="es" value=".es" />
                                                 <label for="es" class="form-control">.es</label>
                                           </div>
                                           <div class="checkBox">
-                                                <input type="checkbox" name="extension" id="en" value=".en" />
+                                                <input type="checkbox" name="extension[]" id="en" value=".en" />
                                                 <label for="en" class="form-control">.en</label>
                                           </div>
                                     </div>
@@ -84,7 +84,7 @@
                                     <hr />
                                     <p class="form_sous_titre">Portée du site</p>
                                     <div class="radioBox">
-                                          <input type="radio" name="porte[]" value="commercial" />
+                                          <input type="radio" name="porte[]" id="butCom" value="commercial" required />
                                           <label for="butCom">Site à but commercial</label>
                                     </div>
                                     <div class="radioBox">
@@ -94,7 +94,7 @@
                                     <br />
                                     <p class="form_sous_titre">Type de site</p>
                                     <div class="radioBox">
-                                          <input type="radio" name="type[]" id="vitrine" value="Site vitrine" />
+                                          <input type="radio" name="type[]" id="vitrine" value="Site vitrine" required />
                                           <label for="vitrine" class="form-control">Site vitrine</label>
                                     </div>
                                     <div class="radioBox">
@@ -102,7 +102,7 @@
                                           <label for="e-commerce" class="form-control">e-commerce</label>
                                     </div>
                                     <input placeholder="Autre(s)" name="autreType" type="text" id="autreType" value="" />
-                                    <textarea placeholder="Objectif(s) du site" name="objectif" rows="7"></textarea>
+                                    <textarea placeholder="Objectif(s) du site" name="objectif" rows="7" id="objectif"></textarea>
                                     <input placeholder="Public cible" name="public" type="text" id="public" value="" />
                               </div>
                               <div class="formBox">
@@ -150,7 +150,7 @@
                                                 <label for="Blog">Blog</label>
                                           </div>
                                     </div>
-                                    <textarea placeholder="Autres fonctionnalités attendues (veillez à être le plus précis possible)" name="autreFonction" rows="5"></textarea>
+                                    <textarea placeholder="Autres fonctionnalités attendues (veillez à être le plus précis possible)" name="autreFonction" rows="5" id="autreFonction"></textarea>
                               </div>
                               <div class="formBox">
                                     <p class="formTitre titre4">Organisation et navigation</p>
@@ -170,14 +170,14 @@
                                                 >
                                           </div>
                                     </div>
-                                    <textarea placeholder="Menu principal (et menus secondaires)" name="planSite" rows="5"></textarea>
+                                    <textarea placeholder="Menu principal (et menus secondaires)" name="planSite" id="planSite" rows="5"></textarea>
                               </div>
                               <div class="formBox">
                                     <p class="formTitre titre5">Intégration des contenus</p>
                                     <hr />
                                     <p class="form_sous_titre">Qui intègre les contenus?</p>
                                     <div class="checkBox">
-                                          <input type="radio" name="integration[]" id="contAgenCli" value="Intégration des contenus de base par l'agence puis des contenus nouveaux par le client" />
+                                          <input type="radio" name="integration[]" id="contAgenCli" value="Intégration des contenus de base par l'agence puis des contenus nouveaux par le client" required />
                                           <label for="contAgenCli">Intégration des contenus de base par l'agence puis des contenus nouveaux par le client</label>
                                     </div>
                                     <div class="checkBox">
@@ -191,7 +191,7 @@
                                     <br />
                                     <p class="form_sous_titre">Qui fournit les contenus?</p>
                                     <div class="checkBox">
-                                          <input type="radio" name="origineContenu[]" id="client" value="Le client fournit tous les contenus: textes, images etc..." />
+                                          <input type="radio" name="origineContenu[]" id="client" value="Le client fournit tous les contenus: textes, images etc..." required />
                                           <label for="client">Le client fournit tous les contenus: textes, images etc...</label>
                                     </div>
                                     <div class="checkBox">
@@ -214,7 +214,7 @@
                                           </div>
                                     </div>
                                     <div class="checkBox">
-                                          <input type="radio" name="charteExist[]" id="charte" value="Oui" />
+                                          <input type="radio" name="charteExist[]" id="charte" value="Oui" required />
                                           <label for="charte">Oui</label>
                                     </div>
                                     <div class="checkBox">
@@ -224,7 +224,7 @@
                                     <br />
                                     <p class="form_sous_titre">Design du site</p>
                                     <div class="checkBox">
-                                          <input type="radio" name="charte[]" id="designMes" value="Création d'un design sur mesure" />
+                                          <input type="radio" name="charte[]" id="designMes" value="Création d'un design sur mesure" required />
                                           <label for="designMes">Création d'un design sur mesure (Nous réalisons une maquette)</label>
                                     </div>
                                     <div class="checkBox">
@@ -238,7 +238,7 @@
                                     <br />
                                     <p class="form_sous_titre">Logo du site</p>
                                     <div class="checkBox">
-                                          <input type="radio" name="logo[]" id="logoMes" value="Création d'un logo sur mesure" />
+                                          <input type="radio" name="logo[]" id="logoMes" value="Création d'un logo sur mesure" required />
                                           <label for="logoMes">Création d'un logo sur mesure</label>
                                     </div>
                                     <div class="checkBox">
@@ -356,7 +356,7 @@
                                     <hr />
                                     <p class="form_sous_titre">Sauvegardes</p>
                                     <div class="checkBox">
-                                          <input type="radio" name="sauvegarde[]" id="man" value="Manuelles" />
+                                          <input type="radio" name="sauvegarde[]" id="man" value="Manuelles" required />
                                           <label for="man">Manuelles</label>
                                     </div>
                                     <div class="checkBox">
@@ -368,9 +368,9 @@
                                           <label for="savNo">Pas de sauvegarde</label>
                                     </div>
                                     <br />
-                                    <p class="formTitre titre10">Mises à jour</p>
+                                    <p class="form_sous_titre">Mises à jour</p>
                                     <div class="checkBox">
-                                          <input type="radio" name="maj[]" id="majAgen" value="Par l'agence" />
+                                          <input type="radio" name="maj[]" id="majAgen" value="Par l'agence" required />
                                           <label for="majAgen">Par l'agence</label>
                                     </div>
                                     <div class="checkBox">
@@ -415,7 +415,7 @@
                                     <hr />
                                     <p class="form_sous_titre">L'enregistrement du nom de domaine et l'hébergement sont pris en charge</p>
                                     <div class="checkBox">
-                                          <input type="radio" name="domaine[]" id="domCli" value="Par le client" />
+                                          <input type="radio" name="domaine[]" id="domCli" value="Par le client" required />
                                           <label for="domCli">Par le client</label>
                                     </div>
                                     <div class="checkBox">
@@ -438,54 +438,136 @@
                                     type="submit"
                                     name="submit"
                                     value="Générer le cahier des charges"
-                                    onclick="$(function () { 
-                                        window.jsPDF = window.jspdf.jsPDF;
-                                        let doc = new jsPDF()
-                                        doc.setFillColor(32, 53, 86);
-                                        doc.rect(0, 0, 250, 260, 'F');
-                                        doc.setTextColor(96, 255, 128);
-                                        doc.setFontSize(35)
-                                        doc.setFont(undefined, 'bold')
-                                        doc.text('Cahier des charges', 108, 20, 'center')
+                                    onclick="
+                                        //$(function () { 
+                                        // window.jsPDF = window.jspdf.jsPDF;
+                                        // let doc = new jsPDF('p', 'pt', 'a4')
+                                        // doc.html(document.getElementById('content'), {
+                                        //     callback : function(doc){
+                                        //         doc.save('test.pdf')
+                                        //     },
+                                        //     margin: [40, 40, 10, 10]
+                                        // });
+                                        // doc.setFillColor(32, 53, 86);
+                                        // doc.rect(0, 0, 250, 260, 'F');
+                                        // doc.setTextColor(96, 255, 128);
+                                        // doc.setFontSize(35)
+                                        // doc.setFont(undefined, 'bold')
+                                        // doc.text('Cahier des charges', 108, 20, 'center')
                                         
-                                        doc.setFontSize(13)
-                                        doc.setFont(undefined, 'normal')
-                                        doc.setFillColor(24, 36, 54);
-                                        doc.rect(0, 32, 250, 10, 'F');
-                                        doc.text('Présentation du site', 5, 40)
+                                        // doc.setFontSize(13)
+                                        // doc.setFont(undefined, 'normal')
+                                        // doc.setFillColor(24, 36, 54);
+                                        // doc.rect(0, 33, 250, 10, 'F');
+                                        // doc.text('Présentation du site', 5, 40)
                                         
-                                        doc.setTextColor(255, 255, 255);
-                                        doc.text('Nom du site: '+document.querySelector(`#nomSite`).value, 5, 50)
-                                        doc.text('Thématique du site: '+document.querySelector(`#themeSite`).value, 5, 57)
+                                        // doc.setTextColor(255, 255, 255);
+                                        // doc.text('Nom du site: '+document.querySelector(`#nomSite`).value, 5, 50)
+                                        // doc.text('Thématique du site: '+document.querySelector(`#themeSite`).value, 5, 57)
 
-                                        let descTxt = $('#descSite').val();
-                                        doc.text('Description: '+descTxt, 5, 64)
+                                        // let descTxt = $('#descSite').val();
+                                        // doc.text('Description: '+descTxt, 5, 64)
 
-                                        doc.text('URL du site: '+document.querySelector(`#adrSite`).value, 5, 71)
+                                        // doc.text('URL du site: '+document.querySelector(`#adrSite`).value, 5, 71)
                                         
-                                        let checkedExtension = document.getElementsByName('extension');
-                                        let checkedExtensionChecked = [];
-                                        let extensionValues = '';
-                                        for(let i=0; i<checkedExtension.length; i++){
-                                            if(checkedExtension[i].checked){
-                                                checkedExtensionChecked.push(checkedExtension[i]);
-                                                let cval = checkedExtension[i].value+', ';
-                                                extensionValues = extensionValues + cval;
-                                            }
-                                        }
-                                        doc.text('Extension(s) complémentaire(s): '+extensionValues, 5, 78)
-                                        doc.text('Autre(s): '+document.querySelector(`#autreExt`).value, 5, 85)
-
-                                        doc.setTextColor(96, 255, 128);
-                                        doc.setFillColor(24, 36, 54);
-                                        doc.rect(0, 91, 250, 10, 'F');
-                                        doc.text('Objectifs du site', 5, 99)
+                                        // let checkedExtension = document.getElementsByName('extension');
+                                        // let checkedExtensionChecked = [];
+                                        // let extensionValues = '';
+                                        // for(let i=0; i<checkedExtension.length; i++){
+                                        //     if(checkedExtension[i].checked){
+                                        //         checkedExtensionChecked.push(checkedExtension[i]);
+                                        //         let cval = checkedExtension[i].value+', ';
+                                        //         extensionValues = extensionValues + cval;
+                                        //     }
+                                        // }
+                                        // doc.text('Extension(s) complémentaire(s): '+extensionValues, 5, 78)
+                                        // doc.text('Autre(s): '+document.querySelector(`#autreExt`).value, 5, 85)
                                         
-                                        doc.setTextColor(255, 255, 255);
+                                        // doc.setTextColor(96, 255, 128);
+                                        // doc.setFillColor(24, 36, 54);
+                                        // doc.rect(0, 92, 250, 10, 'F');
+                                        // doc.text('Objectifs du site', 5, 99)
+                                        
+                                        // doc.setTextColor(255, 255, 255);
+                                        // let checkedPorte = document.getElementsByName('porte')
+                                        // let checkedPorteChecked = [];
+                                        // let porteValues = '';
+                                        // for(let i=0; i<checkedPorte.length; i++){
+                                        //     if(checkedPorte[i].checked){
+                                        //         checkedPorteChecked.push(checkedPorte[i]);
+                                        //         let cval = checkedPorte[i].value;
+                                        //         porteValues = porteValues + cval;
+                                        //     }
+                                        // }
+                                        // doc.text('Portée du site: '+porteValues, 5, 113)
+                                        
+                                        // let checkedType = document.getElementsByName('type')
+                                        // let checkedTypeChecked = [];
+                                        // let typeValues = '';
+                                        // for(let i=0; i<checkedType.length; i++){
+                                        //     if(checkedType[i].checked){
+                                        //         checkedTypeChecked.push(checkedType[i]);
+                                        //         let cval = checkedType[i].value;
+                                        //         typeValues = typeValues + cval;
+                                        //     }
+                                        // }
+                                        // doc.text('Type de site: '+typeValues, 5, 120)
+                                        // doc.text('Autre(s): '+document.querySelector(`#autreType`).value, 5, 127)
+                                        // let objectifTxt = $('#objectif').val();
+                                        // doc.text('Objectif(s) du site:  '+objectifTxt, 5, 134)
+                                        // doc.text('Public cible: '+document.querySelector(`#public`).value, 5, 141)
+                                        
+                                        // doc.setTextColor(96, 255, 128);
+                                        // doc.setFillColor(24, 36, 54);
+                                        // doc.rect(0, 149, 250, 10, 'F');
+                                        // doc.text('Fonctionnalités attendues', 5, 155)
+                                        
+                                        // doc.setTextColor(255, 255, 255);
+                                        // let checkedFonction = document.getElementsByName('fonction[]')
+                                        // let checkedFonctionChecker = [];
+                                        // let fonctionValues = '';
+                                        // for(let i=0; i<checkedFonction.length; i++){
+                                        //     if(checkedFonction[i].checked){
+                                        //         checkedFonctionChecker.push(checkedFonction[i]);
+                                        //         let cval = checkedFonction[i].value+', ';
+                                        //         fonctionValues = fonctionValues + cval;
+                                        //     }
+                                        // }
+                                        // doc.text('Fonctionnalités: '+fonctionValues, 5, 169)
+                                        // let fonctionTxt = $('#autreFonction').val();
+                                        // doc.text('Autres fonctionnalités:  '+fonctionTxt, 5, 176)
 
-                                        doc.save('Cahier des charges '+document.querySelector(`#nomSite`).value+'.pdf')
-                                        window.close()
-                                    });"
+                                        // doc.setTextColor(96, 255, 128);
+                                        // doc.setFillColor(24, 36, 54);
+                                        // doc.rect(0, 184, 250, 10, 'F');
+                                        // doc.text('Organisation et navigation', 5, 190)
+                                        
+                                        // doc.setTextColor(255, 255, 255);
+                                        // let planTxt = $('#planSite').val();
+                                        // doc.text('Plan du site:  '+planTxt, 5, 204)
+
+                                        // doc.setTextColor(96, 255, 128);
+                                        // doc.setFillColor(24, 36, 54);
+                                        // doc.rect(0, 212, 250, 10, 'F');
+                                        // doc.text('Intégration des contenus', 5, 218)
+                                        
+                                        // doc.setTextColor(255, 255, 255);
+                                        // let checkedContenu = document.getElementsByName('integration[]')
+                                        // let checkedContenuChecker = [];
+                                        // let contenuValues = '';
+                                        // for(let i=0; i<checkedContenu.length; i++){
+                                        //     if(checkedContenu[i].checked){
+                                        //         checkedContenuChecker.push(checkedContenu[i]);
+                                        //         let cval = checkedContenu[i].value+', ';
+                                        //         contenuValues = contenuValues + cval;
+                                        //     }
+                                        // }
+                                        // doc.text('Qui intègre les contenus: '+contenuValues, 5, 232)
+
+                                        // doc.save('Cahier des charges '+document.querySelector(`#nomSite`).value+'.pdf')
+                                        // window.close()
+                                    //});
+                                    "
                               />
                         </form>
                   </div>
