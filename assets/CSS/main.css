@@ -5,7 +5,7 @@
 
 body {
       background-color: #203556;
-      background-image: url('../../assets/imgs/grid2.svg');
+      background-image: url('../imgs/grid2.svg');
       background-position: center;
       background-attachment: fixed;
 }
@@ -16,7 +16,7 @@ header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background-image: url('../../assets/imgs/Blueprint-background.jpg');
+      background-image: url('../imgs/Blueprint-background.jpg');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
