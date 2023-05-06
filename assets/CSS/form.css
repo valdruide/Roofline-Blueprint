@@ -5,7 +5,7 @@
 .form_section {
       margin-top: 80px;
       margin-bottom: 80px;
-      background-image: url('../imgs/grid-anim.svg');
+      background-image: url('/assets/imgs/grid-anim.svg');
       background-position: center;
       background-attachment: fixed;
 }
