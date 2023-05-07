@@ -1,6 +1,7 @@
 :root {
       --mainColor: #60ff80;
       --secondaryColor: #182436;
+      --lightBlueColor: #203556;
 }
 
 body {
@@ -23,6 +24,11 @@ header {
       background-attachment: fixed;
       padding-right: 10vw;
       padding-left: 10vw;
+}
+
+a {
+      text-decoration: underline;
+      color: var(--mainColor);
 }
 
 h1 {
@@ -57,4 +63,28 @@ header img {
 .info_section p {
       font-size: 19px;
       text-align: justify;
+}
+
+footer {
+      position: relative;
+      background-color: var(--secondaryColor);
+      height: 30vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      clip-path: polygon(53% 0, 100% 0, 100% 100%, 0 100%, 0 0, 47% 0, 50% 15%);
+}
+
+footer h2 {
+      font-size: 2rem;
+}
+
+footer a {
+      transition: all 0.3s;
+}
+
+footer a:hover {
+      background-color: var(--mainColor);
+      color: #fff;
+      text-decoration: none;
 }
