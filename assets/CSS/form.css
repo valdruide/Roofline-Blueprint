@@ -1,13 +1,10 @@
 ::placeholder {
-      color: rgb(163, 163, 163);
+      color: rgb(194, 215, 236);
 }
 
 .form_section {
       margin-top: 80px;
       margin-bottom: 80px;
-      background-image: url('../imgs/grid-anim.svg');
-      background-position: center;
-      background-attachment: fixed;
 }
 
 .form_container {
@@ -19,7 +16,8 @@
 }
 
 .form_container h3 {
-      font-size: 2rem;
+      font-size: 3rem;
+      margin-bottom: 20px;
 }
 
 .formBox {
@@ -89,14 +87,24 @@
 }
 
 hr {
-      margin: 20px 0;
+      margin: 10px 0 20px 0;
+      height: 1px;
+      background-color: rgb(196, 196, 196);
+      border: none;
 }
 
 .form_container form {
-      border-radius: 10px;
+      border-radius: 16px;
       background-color: var(--secondaryColor);
       padding: 30px;
       width: 50%;
+
+      /* From https://css.glass */
+      background: rgba(54, 85, 136, 0.458);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.399);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .form_container input,
@@ -105,12 +113,13 @@ hr {
       margin-top: 8px;
       margin-bottom: 8px;
       font-family: 'Raleway', sans-serif;
-      border-radius: 5px;
+      border-radius: 3px;
       padding: 5px 10px;
       outline: none;
       border: none;
-      background-color: #2d3051;
+      background-color: #585d9633;
       color: #fff;
+      border: 1px solid rgba(166, 204, 255, 0.3);
 }
 
 /* textArea */
@@ -145,7 +154,7 @@ input[type='checkbox'] {
       /* suppresssion de l'apparence de base */
       -webkit-appearance: none;
       appearance: none;
-      background-color: var(--secondaryColor);
+      background-color: #585d9633;
       margin: 0;
       /* nouvelle apparence */
       font: inherit;
@@ -186,7 +195,7 @@ input[type='radio'] {
       /* suppresssion de l'apparence de base */
       -webkit-appearance: none;
       appearance: none;
-      background-color: var(--secondaryColor);
+      background-color: #585d9633;
       margin: 0;
       /* nouvelle apparence */
       font: inherit;
@@ -254,6 +263,7 @@ input[type='radio']:checked::before {
       font-weight: 700;
       cursor: pointer;
       transition: all 0.2s;
+      width: 100%;
 }
 
 #btn-form:hover {
