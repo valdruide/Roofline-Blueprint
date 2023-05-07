@@ -11,11 +11,14 @@
         function generatePDF(){
             window.jsPDF = window.jspdf.jsPDF;
             let doc = new jsPDF('p', 'pt', 'a4')
+            // doc.setFillColor(32, 53, 86);
+            // doc.rect(0, 0, 700, 2200, "F");
             doc.html(document.getElementById('input_data'), {
+                autoPaging: 'true',
+                margin: [10, 0, 10, 0],
                 callback : function(doc){
                     doc.save('test.pdf')
                 },
-                margin: [0, 0, 0, 0]
             });
         }
     </script>
@@ -186,6 +189,7 @@
     <p><span>Remarques: </span><?php echo $_POST["remarq"]; ?></p>
     <h2>Contacts du projet</h2>
     <p><span>Contact(s): </span><?php echo $_POST["contact"]; ?></p>
+    <p class='generatedBy'>Généré par <span>https://roofline.fr</span></p>
 </div>
     <a href="javascript:generatePDF()">Dowload PDF</a>
 </body>

@@ -12,11 +12,13 @@ span {
 
 p {
       margin: 6px 0;
+      color: rgb(20, 20, 20);
 }
 
 p span {
       font-weight: 700;
-      color: #a7ffb7;
+      /* color: #a7ffb7; */
+      color: #345b92;
 }
 
 h1,
@@ -44,11 +46,23 @@ h3 {
 
 body {
       color: #fff;
-      background-color: black;
 }
 
 #input_data {
-      background-color: #203556;
+      /* background-color: #203556; */
       width: 403pt;
       padding: 40px 30px;
+}
+
+.generatedBy {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 18px;
+      background-color: #182436;
+      color: #fff;
+      padding: 10px;
+}
+.generatedBy span {
+      font-size: 18px;
+      color: #60ff80;
 }
