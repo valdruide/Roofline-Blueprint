@@ -26,6 +26,61 @@ header {
       padding-left: 10vw;
 }
 
+.btnRemplir {
+      text-decoration: none;
+      position: relative;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--lightBlueColor);
+      padding: 15px 30px;
+      border-radius: 25px;
+      font-size: 18px;
+      color: #fff;
+      font-weight: 600;
+      transition: all 0.3s ease;
+}
+
+.icons {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 30px;
+}
+
+.icons i {
+      position: absolute;
+      left: 0;
+      display: block;
+}
+
+.icon-default {
+      transition: opacity 0.3s, transform 0.3s;
+}
+
+.icon-hover {
+      transition: opacity 0.3s, transform 0.3s;
+      transform: rotate(-180deg) scale(0.5);
+      opacity: 0;
+}
+
+.btnRemplir:hover {
+      color: var(--mainColor);
+      transform: scale(1.1);
+      box-shadow: -5px 8px 5px 0 rgba(23, 23, 23, 0.4);
+}
+
+.btnRemplir:hover .icon-hover {
+      transform: rotate(0deg) scale(1);
+      opacity: 1;
+}
+
+.btnRemplir:hover .icon-default {
+      transform: rotate(180deg) scale(0.5);
+      opacity: 0;
+}
+
 a {
       text-decoration: underline;
       color: var(--mainColor);
@@ -45,6 +100,7 @@ h1 span {
 header h2 {
       font-size: 2.5rem;
       margin: 0;
+      margin-bottom: 50px;
 }
 
 header img {

@@ -19,9 +19,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+/* Scrollbar */
+* {
+      scrollbar-width: 10px;
+      scrollbar-color: #60ff80 #182436;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+      width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+      background: #182436;
+}
+
+*::-webkit-scrollbar-thumb {
+      background-color: #60ff80;
+      border-radius: 10px;
+}
+/* Scrollbar */
+
+/* Text selection */
+::-moz-selection {
+      /* Code for Firefox */
+      color: #fff;
+      background: #60ff80;
+}
+
+::selection {
+      color: #fff;
+      background: #60ff80;
+}
+/* Text selection */
 html {
       line-height: 1.15; /* 1 */
       -webkit-text-size-adjust: 100%; /* 2 */
+      scroll-behavior: smooth;
 }
 
 /* Sections
@@ -66,7 +103,8 @@ h3 {
 
 p,
 label,
-span {
+span,
+a {
       font-family: 'Raleway', sans-serif;
 }
 
