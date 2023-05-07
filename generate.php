@@ -127,7 +127,7 @@
                     echo "<p><span>Traduction: </span>".$value.'</p>';
                 }
             } else {
-                echo "<p><span>Traductions: Aucune//</span></p>";
+                echo "<p><span>Traductions: Aucune</span></p>";
             }
     ?>
     <p><span>Autre(s) traductions: </span><?php echo $_POST["autreLangue"]; ?></p>
@@ -138,7 +138,7 @@
                     echo "<p><span>Service souhaité: </span>".$value.'</p>';
                 }
             } else {
-                echo "<p><span>Service souhaité: Aucun//</span></p>";
+                echo "<p><span>Service souhaité: Aucun</span></p>";
             }
     ?>
     <h2>Marketing</h2>
@@ -148,7 +148,7 @@
                     echo "<p><span>Service souhaité: </span>".$value.'</p>';
                 }
             } else {
-                echo "<p><span>Service souhaité: Aucun//</span></p>";
+                echo "<p><span>Service souhaité: Aucun</span></p>";
             }
     ?>
     <h2>Maintenance</h2>
@@ -173,7 +173,7 @@
                     echo "<p><span>Formation souhaitée: </span>".$value.'</p>';
                 }
             } else {
-                echo "<p><span>Formations souhaitées: Aucune//</span></p>";
+                echo "<p><span>Formations souhaitées: Aucune</span></p>";
             }
     ?>
     <p><span>Autre(s) formation(s) souhaitée(s): </span><?php echo $_POST["autreForma"]; ?></p>
