@@ -11,13 +11,11 @@
         function generatePDF(){
             window.jsPDF = window.jspdf.jsPDF;
             let doc = new jsPDF('p', 'pt', 'a4')
-            // doc.setFillColor(32, 53, 86);
-            // doc.rect(0, 0, 700, 2200, "F");
             doc.html(document.getElementById('input_data'), {
                 autoPaging: 'true',
                 margin: [10, 0, 10, 0],
                 callback : function(doc){
-                    doc.save('test.pdf')
+                    doc.save('Cahier des charges.pdf')
                 },
             });
         }

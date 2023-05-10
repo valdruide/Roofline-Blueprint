@@ -99,7 +99,6 @@ hr {
       padding: 30px;
       width: 55%;
 
-      /* From https://css.glass */
       background: rgba(54, 85, 136, 0.458);
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.399);
       backdrop-filter: blur(10px);
