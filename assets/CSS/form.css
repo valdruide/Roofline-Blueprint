@@ -272,3 +272,12 @@ input[type='radio']:checked::before {
       font-weight: 700;
       transform: scale(1.02);
 }
+
+@media (max-width: 1024px) {
+      .form_container h3 {
+            font-size: 1.6rem;
+      }
+      .form_container form {
+            width: 90%;
+      }
+}

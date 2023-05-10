@@ -415,3 +415,10 @@ template {
 [hidden] {
       display: none;
 }
+
+@media (max-width: 767px) {
+      section {
+            padding-left: 20px;
+            padding-right: 20px;
+      }
+}

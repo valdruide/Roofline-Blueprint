@@ -40,6 +40,10 @@ header {
       padding-left: 10vw;
 }
 
+.headTxt {
+      z-index: 5;
+}
+
 .btnRemplir {
       text-decoration: none;
       position: relative;
@@ -162,4 +166,28 @@ footer a:hover {
       background-color: var(--mainColor);
       color: #fff;
       text-decoration: none;
+}
+
+@media (max-width: 767px) {
+      header {
+            justify-content: center;
+            padding-left: 20px;
+            padding-right: 20px;
+      }
+      .headTxt {
+            text-align: center;
+      }
+      .headTxt h1 {
+            font-size: 2rem;
+      }
+
+      .info_section p {
+            font-size: 18px;
+      }
+}
+
+@media (max-width: 1024px) {
+      .headImg {
+            display: none;
+      }
 }
