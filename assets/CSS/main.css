@@ -169,6 +169,22 @@ footer a:hover {
       text-decoration: none;
 }
 
+.postFooter {
+      background-color: #151a22;
+      text-align: center;
+      padding: 10px 0;
+}
+
+.postFooter p {
+      margin: 0;
+      font-size: 12px;
+      font-style: italic;
+}
+
+.postFooter a{
+      color: #fff;
+}
+
 @media (max-width: 767px) {
       header {
             justify-content: center;
