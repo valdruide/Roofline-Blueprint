@@ -8,6 +8,7 @@ body {
       background-color: #203556;
       background-image: url('../imgs/6026681.jpg');
       background-position: center;
+      background-repeat: no-repeat;
       background-attachment: fixed;
       background-blend-mode: overlay;
 }
@@ -173,12 +174,27 @@ footer a:hover {
             justify-content: center;
             padding-left: 20px;
             padding-right: 20px;
+            background-size: cover;
+            background-attachment: scroll;
       }
+
+      body {
+            background-size: cover;
+      }
+
       .headTxt {
             text-align: center;
       }
       .headTxt h1 {
+            font-size: 3rem;
+      }
+      .headTxt h2 {
+            font-size: 1rem;
+      }
+
+      .info_section h2{
             font-size: 2rem;
+            text-align: center;
       }
 
       .info_section p {

@@ -1,5 +1,5 @@
 ::placeholder {
-      color: rgb(194, 215, 236);
+      color: rgb(232, 238, 245);
 }
 
 .form_section {
@@ -99,9 +99,9 @@ hr {
       padding: 30px;
       width: 55%;
 
-      background: rgba(54, 85, 136, 0.458);
+      background: rgb(103 135 135 / 34%);
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.399);
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.3);
 }
@@ -116,7 +116,7 @@ hr {
       padding: 5px 10px;
       outline: none;
       border: none;
-      background-color: #585d9633;
+      background-color: #86e9ff33;
       color: #fff;
       border: 1px solid rgba(166, 204, 255, 0.3);
 }
@@ -153,7 +153,7 @@ input[type='checkbox'] {
       /* suppresssion de l'apparence de base */
       -webkit-appearance: none;
       appearance: none;
-      background-color: #585d9633;
+      background-color: #86e9ff33;
       margin: 0;
       /* nouvelle apparence */
       font: inherit;
@@ -194,7 +194,7 @@ input[type='radio'] {
       /* suppresssion de l'apparence de base */
       -webkit-appearance: none;
       appearance: none;
-      background-color: #585d9633;
+      background-color: #86e9ff33;
       margin: 0;
       /* nouvelle apparence */
       font: inherit;
