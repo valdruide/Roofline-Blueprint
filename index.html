@@ -8,495 +8,493 @@
 
 <!DOCTYPE html>
 <html lang="fr">
-      <head>
-            <meta charset="UTF-8" />
-            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <title>Roofline Blueprint</title>
-            <meta name="description" content="Optimisez votre projet, remplissez simplement les formulaires avec les informations de votre projet et obtenez rapidement un cahier des charges personnalisé" />
-            <!-- css -->
-            <link rel="stylesheet" href="./assets/CSS/normalize.css" />
-            <link rel="stylesheet" href="./assets/CSS/main.css" />
-            <link rel="stylesheet" href="./assets/CSS/form.css" />
-            <!-- font Awesome -->
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-      </head>
-      <body>
-            <header>
-                  <div class="headTxt">
-                        <h1><span>Roofline</span> Blueprint</h1>
-                        <h2>Génération de votre cahier des charges</h2>
-                        <a href="#editor" class="btnRemplir">
-                              <div class="icons">
-                                    <i class="fa-solid fa-arrow-right icon-default"></i>
-                                    <i class="fa-solid fa-check icon-hover"></i>
-                              </div>
-                              Je remplis le formulaire
-                        </a>
-                  </div>
-                  <div class="headImg">
-                        <img src="./assets/imgs/Clay_Green0001.png" alt="" />
-                  </div>
-            </header>
-            <section class="etapesSection">
-                  <p class="wow">
-                        <span>WAOUW!</span> Vous avez choisi l'agence Roofline pour votre projet web ! MERCI 💚
-                  </p>
-                  <p class="titreEtape">Quelles sont les étapes de votre projet ?</p>
-                  <hr class="etapesHR">
-                  <ul>
-                        <li>Après étude de votre projet et de vos besoin, l'agence Roofline vous fait une proposition de devis</li>
-                        <li>Après acceptation, vous recevez une demande d'acompte de 50%</li>
-                        <li>Nous définissons ensemble le cahier des charges opérationnel</li>
-                        <li>En cas d'ajout de modules ou de demandes supplémentaires, l'agence Roofline fait un devis annexe</li>
-                        <li>Une fois validé, nos développeurs installent une version de pré-production sécurisée sur les serveurs de l'agence</li>
-                        <li>Après intégration de votre charte graphique et des éléments techniques de base, nous faisons un point d'avancement du projet ensemble</li>
-                        <li>Après intégration des contenus multimédias (images, vidéos, textes), nous optimisons votre site pour le responsive et le SEO</li>
-                        <li>La pré-production optimisée, il ne vous manquera plus qu'à la valider après test et ajustements</li>
-                        <li>Préparez votre campagne de lancement, le site sera mis en ligne à la date définie, faisons une réunion de lancement pour en discuter ?</li>
-                        <li>Notre équipe vous forme à l'utilisation et l'administration de votre site (c'est éligible à la prise en charge OPCO!)</li>
-                        <li>3 mois après, un point statistique s'impose, revoyons-nous pour en parler !</li>
-                  </ul>
-                  <p class="titreEtape">Pourquoi un cahier des charges ?</p>
-                  <hr class="etapesHR">
-                  <p class="infoP">
-                        Le cahier des charges sera votre/notre ligne conductrice tout au long du développement du projet.<br>
-                        Il nous fait gagner un temps considérable, nous permet de s'assurer que toutes vos attentes et vos exigences soient définies.<br>
-                        Nos développeurs n'en seront que plus efficaces !<br>
-                        C'est aussi un document qui vous/nous protège.<br>
-                        De notre côté, il nous permet d'ajuster le devis si nous constatons un écart entre vos attentes et notre première proposition.<br>
-                        De votre côté, il vous assure une trace écrite de l'ensemble des composantes de votre futur site !<br>
-                        Vous ne payerez le solde de notre collaboration seulement quand l'ensemble de ce qui avait été convenu dans le présent cahier des charges sera en ligne.<br>
-                  </p>
-                  <p class="titreEtape">Que dois-je faire ?</p>
-                  <hr class="etapesHR">
-                  <p class="infoP">
-                        Laissez-vous guider à travers ce formulaire.<br>
-                        Vous n'avez pas la réponse aux questions posées ? Pas d'inquiétude, nous reviendrons vers vous pour vulgariser tout ça.<br>
-                        Roofline Blueprint vous permettra de générer un cahier des charges en quelques minutes seulement. <br>
-                        Le cahier des charges est alors généré automatiquement, vous pouvez par la suite l'enregistrer sur votre ordinateur afin de nous l'envoyer par mail.<br>
-                  </p>
-            </section>
-            <section class="form_section">
-                  <div class="form_container" id="editor">
-                        <h3>Informations sur votre projet</h3>
-                        <form action="generate.php" method="post" target="_blank" id="content">
-                              <div class="formBox">
-                                    <p class="formTitre titre1">Présentation du projet</p>
-                                    <hr />
-                                    <input placeholder="Nom du site" name="nomSite" type="text" id="nomSite" value="" />
-                                    <input placeholder="Thématique du site" name="themeSite" type="text" id="themeSite" value="" />
-                                    <textarea placeholder="Description du site" name="description" rows="5" id="descSite"></textarea>
-                                    <input placeholder="URL du site" name="adrSite" type="text" id="adrSite" value="" />
-                                    <br />
-                                    <br />
-                                    <div class="helpDiv">
-                                          <p class="form_sous_titre">Extension(s) complémentaire(s)</p>
-                                          <div class="helpBulle" aria-hidden="true">
-                                                <i class="fa-solid fa-question-circle"></i>
-                                                <span>
-                                                      Chaque extensions complémentaires ajoutées seront facturées par l'hébergeur.
-                                                </span>
-                                          </div>
-                                    </div>
-                                    <div class="checkBox_row">
-                                          <div class="checkBox">
-                                                <input type="checkbox" name="extension[]" id="fr" value=".fr" />
-                                                <label for="fr" class="form-control">.fr</label>
-                                          </div>
-                                          <div class="checkBox">
-                                                <input type="checkbox" name="extension[]" id="be" value=".be" />
-                                                <label for="be" class="form-control">.be</label>
-                                          </div>
-                                          <div class="checkBox">
-                                                <input type="checkbox" name="extension[]" id="com" value=".com" />
-                                                <label for="com" class="form-control">.com</label>
-                                          </div>
-                                          <div class="checkBox">
-                                                <input type="checkbox" name="extension[]" id="org" value=".org" />
-                                                <label for="org" class="form-control">.org</label>
-                                          </div>
-                                          <div class="checkBox">
-                                                <input type="checkbox" name="extension[]" id="net" value=".net" />
-                                                <label for="net" class="form-control">.net</label>
-                                          </div>
-                                          <div class="checkBox">
-                                                <input type="checkbox" name="extension[]" id="es" value=".es" />
-                                                <label for="es" class="form-control">.es</label>
-                                          </div>
-                                          <div class="checkBox">
-                                                <input type="checkbox" name="extension[]" id="en" value=".en" />
-                                                <label for="en" class="form-control">.en</label>
-                                          </div>
-                                    </div>
-                                    <input placeholder="Autre(s)" name="autreExt" type="text" id="autreExt" value="" />
-                              </div>
-                              <div class="formBox">
-                                    <p class="formTitre titre2">Objectifs du site</p>
-                                    <hr />
-                                    <p class="form_sous_titre">Portée du site</p>
-                                    <div class="radioBox">
-                                          <input type="radio" name="porte[]" id="butCom" value="commercial" />
-                                          <label for="butCom">Site à but commercial</label>
-                                    </div>
-                                    <div class="radioBox">
-                                          <input type="radio" name="porte[]" id="butNoCom" value="non commercial" />
-                                          <label for="butNoCom">Site à but non commercial</label>
-                                    </div>
-                                    <br />
-                                    <p class="form_sous_titre">Type de site</p>
-                                    <div class="radioBox">
-                                          <input type="radio" name="type[]" id="vitrine" value="Site vitrine" />
-                                          <label for="vitrine" class="form-control">Site vitrine</label>
-                                    </div>
-                                    <div class="radioBox">
-                                          <input type="radio" name="type[]" id="e-commerce" value="e-commerce" />
-                                          <label for="e-commerce" class="form-control">e-commerce</label>
-                                    </div>
-                                    <input placeholder="Autre(s)" name="autreType" type="text" id="autreType" value="" />
-                                    <textarea placeholder="Objectif(s) du site" name="objectif" rows="7" id="objectif"></textarea>
-                                    <input placeholder="Public cible" name="public" type="text" id="public" value="" />
-                              </div>
-                              <div class="formBox">
-                                    <p class="formTitre titre3">Fonctionnalités attendues</p>
-                                    <hr />
-                                    <div class="checkBox_row">
-                                          <div class="checkBox">
-                                                <input type="checkbox" name="fonction[]" id="Avis" value="Avis clients" />
-                                                <label for="Avis">Avis clients</label>
-                                          </div>
-                                          <div class="checkBox">
-                                                <input type="checkbox" name="fonction[]" id="Agenda" value="Agenda" />
-                                                <label for="Agenda">Agenda</label>
-                                          </div>
-                                          <div class="checkBox">
-                                                <input type="checkbox" name="fonction[]" id="Devis" value="Devis" />
-                                                <label for="Devis">Devis</label>
-                                          </div>
-                                          <div class="checkBox">
-                                                <input type="checkbox" name="fonction[]" id="Formulaire" value="Formulaire" />
-                                                <label for="Formulaire">Formulaire</label>
-                                          </div>
-                                          <div class="checkBox">
-                                                <input type="checkbox" name="fonction[]" id="Galerie" value="Galerie photos" />
-                                                <label for="Galerie">Galerie photos</label>
-                                          </div>
-                                          <div class="checkBox">
-                                                <input type="checkbox" name="fonction[]" id="Newsletter" value="Newsletter" />
-                                                <label for="Newsletter">Newsletter</label>
-                                          </div>
-                                          <div class="checkBox">
-                                                <input type="checkbox" name="fonction[]" id="Reservations" value="Reservations" />
-                                                <label for="Reservations">Réservations</label>
-                                          </div>
-                                          <div class="checkBox">
-                                                <input type="checkbox" name="fonction[]" id="FAQ" value="FAQ" />
-                                                <label for="FAQ">FAQ</label>
-                                          </div>
-                                          <div class="checkBox">
-                                                <input type="checkbox" name="fonction[]" id="ChatBot" value="ChatBot" />
-                                                <label for="ChatBot">ChatBot</label>
-                                          </div>
-                                          <div class="checkBox">
-                                                <input type="checkbox" name="fonction[]" id="Blog" value="Blog" />
-                                                <label for="Blog">Blog</label>
-                                          </div>
-                                    </div>
-                                    <textarea placeholder="Autres fonctionnalités attendues (veillez à être le plus précis possible)" name="autreFonction" rows="5" id="autreFonction"></textarea>
-                              </div>
-                              <div class="formBox">
-                                    <p class="formTitre titre4">Organisation et navigation</p>
-                                    <hr />
-                                    <div class="helpDiv">
-                                          <p class="form_sous_titre">Plan du site</p>
-                                          <div class="helpBulle" aria-hidden="true">
-                                                <i class="fa-solid fa-question-circle"></i>
-                                                <span
-                                                      >Pour définir simplement le plan du site, veuillez indiquer les différents menus que vous comptez utiliser en les présentant de la sorte:<br />
-                                                      1- Acceuil<br />
-                                                      2- Notre catalogue<br />
-                                                      2.1- Produits A<br />
-                                                      2.2- Produits B<br />
-                                                      3- Contact<br />
-                                                      4- etc...</span
-                                                >
-                                          </div>
-                                    </div>
-                                    <textarea placeholder="Menu principal (et menus secondaires)" name="planSite" id="planSite" rows="5"></textarea>
-                              </div>
-                              <div class="formBox">
-                                    <p class="formTitre titre5">Intégration des contenus</p>
-                                    <hr />
-                                    <p class="form_sous_titre">Qui intègre les contenus?</p>
-                                    <div class="checkBox">
-                                          <input type="radio" name="integration[]" id="contAgenCli" value="Intégration des contenus de base par l'agence puis des contenus nouveaux par le client" />
-                                          <label for="contAgenCli">Intégration des contenus de base par l'agence puis des contenus nouveaux par le client</label>
-                                    </div>
-                                    <div class="checkBox">
-                                          <input type="radio" name="integration[]" id="contClient" value="Intégration de tous les contenus par le client" />
-                                          <label for="contClient">Intégration de tous les contenus par le client</label>
-                                    </div>
-                                    <div class="checkBox">
-                                          <input type="radio" name="integration[]" id="contAgence" value="Intégration de tous les contenus par l'agence" />
-                                          <label for="contAgence">Intégration de tous les contenus par l'agence</label>
-                                    </div>
-                                    <br />
-                                    <p class="form_sous_titre">Qui fournit les contenus?</p>
-                                    <div class="checkBox">
-                                          <input type="radio" name="origineContenu[]" id="client" value="Le client fournit tous les contenus: textes, images etc..." />
-                                          <label for="client">Le client fournit tous les contenus: textes, images etc...</label>
-                                    </div>
-                                    <div class="checkBox">
-                                          <input type="radio" name="origineContenu[]" id="agence" value="L'agence propose les contenus: rédaction des textes, recherche d'images etc..." />
-                                          <label for="agence">L'agence propose les contenus: rédaction des textes, recherche d'images etc...</label>
-                                    </div>
-                                    <div class="checkBox">
-                                          <input type="radio" name="origineContenu[]" id="agenCli" value="Le client et l'agence fournissent des contenus" />
-                                          <label for="agenCli">Le client et l'agence fournissent des contenus</label>
-                                    </div>
-                              </div>
-                              <div class="formBox">
-                                    <p class="formTitre titre6">Charte graphique</p>
-                                    <hr />
-                                    <div class="helpDiv">
-                                          <p class="form_sous_titre">Disposez-vous déjà d'une charte graphique?</p>
-                                          <div class="helpBulle" aria-hidden="true">
-                                                <i class="fa-solid fa-question-circle"></i>
-                                                <span>Utilisez-vous des couleurs qui vous caractérisent? Une ou plusieurs polices d'écritures spécifiques? Utilisez-vous un logo? Autant déléments qui définissent votre charte graphique.</span>
-                                          </div>
-                                    </div>
-                                    <div class="checkBox">
-                                          <input type="radio" name="charteExist[]" id="charte" value="Oui" />
-                                          <label for="charte">Oui</label>
-                                    </div>
-                                    <div class="checkBox">
-                                          <input type="radio" name="charteExist[]" id="charteno" value="Non" />
-                                          <label for="charteno">Non</label>
-                                    </div>
-                                    <br />
-                                    <p class="form_sous_titre">Design du site</p>
-                                    <div class="checkBox">
-                                          <input type="radio" name="charte[]" id="designMes" value="Création d'un design sur mesure" />
-                                          <label for="designMes">Création d'un design sur mesure (Nous réalisons une maquette)</label>
-                                    </div>
-                                    <div class="checkBox">
-                                          <input type="radio" name="charte[]" id="designCh" value="Choix d'un design parmi des modèles existants" />
-                                          <label for="designCh">Choix d'un design parmi des modèles existants (Template)</label>
-                                    </div>
-                                    <div class="checkBox">
-                                          <input type="radio" name="charte[]" id="designAd" value="Adaptation d'un design parmi des modèles existants" />
-                                          <label for="designAd">Adaptation d'un design parmi des modèles existants (Template)</label>
-                                    </div>
-                                    <br />
-                                    <p class="form_sous_titre">Logo du site</p>
-                                    <div class="checkBox">
-                                          <input type="radio" name="logo[]" id="logoMes" value="Création d'un logo sur mesure" />
-                                          <label for="logoMes">Création d'un logo sur mesure</label>
-                                    </div>
-                                    <div class="checkBox">
-                                          <input type="radio" name="logo[]" id="logoRet" value="Retouche et intégration d'un logo déjà existant" />
-                                          <label for="logoRet">Retouche et intégration d'un logo déjà existant</label>
-                                    </div>
-                                    <div class="checkBox">
-                                          <input type="radio" name="logo[]" id="logoEx" value="Intégration d'un logo déjà existant" />
-                                          <label for="logoEx">Intégration d'un logo déjà existant</label>
-                                    </div>
-                                    <br />
-                                    <p class="form_sous_titre">Style de site</p>
-                                    <div class="checkBox_row">
-                                          <div class="checkBox">
-                                                <input type="checkbox" name="style[]" id="Sobr" value="Sobre" />
-                                                <label for="Sobr">Sobre</label>
-                                          </div>
-                                          <div class="checkBox">
-                                                <input type="checkbox" name="style[]" id="Mod" value="Moderne" />
-                                                <label for="Mod">Moderne</label>
-                                          </div>
-                                          <div class="checkBox">
-                                                <input type="checkbox" name="style[]" id="Retro" value="Rétro" />
-                                                <label for="Retro">Rétro</label>
-                                          </div>
-                                          <div class="checkBox">
-                                                <input type="checkbox" name="style[]" id="Color" value="Coloré" />
-                                                <label for="Color">Coloré</label>
-                                          </div>
-                                          <div class="checkBox">
-                                                <input type="checkbox" name="style[]" id="Fant" value="Fantaisie" />
-                                                <label for="Fant">Fantaisie</label>
-                                          </div>
-                                          <div class="checkBox">
-                                                <input type="checkbox" name="style[]" id="Graphique" value="Graphique" />
-                                                <label for="Graphique">Graphique</label>
-                                          </div>
-                                    </div>
-                                    <input placeholder="Autre(s)" name="autreStyle" type="text" value="" />
-                                    <br />
-                                    <p class="form_sous_titre">Exemples de sites qui vous inspirent</p>
-                                    <textarea placeholder="Copiez les adresses de sites que vous appréciez" name="exempleSite" rows="5"></textarea>
-                              </div>
-                              <div class="formBox">
-                                    <p class="formTitre titre7">Traductions et Langues</p>
-                                    <hr />
-                                    <p class="form_sous_titre">Langue d'origine du site</p>
-                                    <input placeholder="Langue d'origine" name="langue" type="text" value="" />
-                                    <br />
-                                    <p class="form_sous_titre">Traductions</p>
-                                    <div class="checkBox_row">
-                                          <div class="checkBox">
-                                                <input type="checkbox" class="chkBox" name="traduction[]" id="-fr" value="Français" />
-                                                <label for="-fr">Français</label>
-                                          </div>
-                                          <div class="checkBox">
-                                                <input type="checkbox" class="chkBox" name="traduction[]" id="-en" value="Anglais" />
-                                                <label for="-en">Anglais</label>
-                                          </div>
-                                          <div class="checkBox">
-                                                <input type="checkbox" class="chkBox" name="traduction[]" id="-es" value="Espagnol" />
-                                                <label for="-es">Espagnol</label>
-                                          </div>
-                                          <div class="checkBox">
-                                                <input type="checkbox" class="chkBox" name="traduction[]" id="-it" value="Italien" />
-                                                <label for="-it">Italien</label>
-                                          </div>
-                                          <div class="checkBox">
-                                                <input type="checkbox" class="chkBox" name="traduction[]" id="-de" value="Allemand" />
-                                                <label for="-de">Allemand</label>
-                                          </div>
-                                    </div>
-                                    <input placeholder="Autre(s)" name="autreLangue" type="text" value="" />
-                              </div>
-                              <div class="formBox">
-                                    <p class="formTitre titre8">Référencement</p>
-                                    <hr />
-                                    <p class="form_sous_titre">Service(s) souhaité(s)</p>
-                                    <div class="checkBox_row">
-                                          <div class="checkBox">
-                                                <input type="checkbox" class="chkBox" name="serviceSEO[]" id="Audit" value="Audit" />
-                                                <label for="Audit">Audit</label>
-                                          </div>
-                                          <div class="checkBox">
-                                                <input type="checkbox" class="chkBox" name="serviceSEO[]" id="mots" value="Recherche de mots clés" />
-                                                <label for="mots">Recherche de mots clés</label>
-                                          </div>
-                                          <div class="checkBox">
-                                                <input type="checkbox" class="chkBox" name="serviceSEO[]" id="Opti" value="Optimisation des pages" />
-                                                <label for="Opti">Optimisation des pages</label>
-                                          </div>
-                                          <div class="checkBox">
-                                                <input type="checkbox" class="chkBox" name="serviceSEO[]" id="Stat" value="Statistiques" />
-                                                <label for="Stat">Statistiques</label>
-                                          </div>
-                                    </div>
-                              </div>
-                              <div class="formBox">
-                                    <p class="formTitre titre9">Marketing</p>
-                                    <hr />
-                                    <p class="form_sous_titre">Service(s) souhaité(s)</p>
-                                    <div class="checkBox_row">
-                                          <div class="checkBox">
-                                                <input type="checkbox" class="chkBox" name="marketing[]" id="News" value="Newsletter" />
-                                                <label for="News">Newsletter</label>
-                                          </div>
-                                          <div class="checkBox">
-                                                <input type="checkbox" class="chkBox" name="marketing[]" id="reseau" value="Réseaux sociaux" />
-                                                <label for="reseau">Gestion des réseaux sociaux</label>
-                                          </div>
-                                    </div>
-                              </div>
-                              <div class="formBox">
-                                    <p class="formTitre titre10">Maintenance</p>
-                                    <hr />
-                                    <p class="form_sous_titre">Sauvegardes</p>
-                                    <div class="checkBox">
-                                          <input type="radio" name="sauvegarde[]" id="man" value="Manuelles" />
-                                          <label for="man">Manuelles</label>
-                                    </div>
-                                    <div class="checkBox">
-                                          <input type="radio" name="sauvegarde[]" id="auto" value="Automatiques" />
-                                          <label for="auto">Automatiques</label>
-                                    </div>
-                                    <div class="checkBox">
-                                          <input type="radio" name="sauvegarde[]" id="savNo" value="Pas de sauvegarde" />
-                                          <label for="savNo">Pas de sauvegarde</label>
-                                    </div>
-                                    <br />
-                                    <p class="form_sous_titre">Mises à jour</p>
-                                    <div class="checkBox">
-                                          <input type="radio" name="maj[]" id="majAgen" value="Par l'agence" />
-                                          <label for="majAgen">Par l'agence</label>
-                                    </div>
-                                    <div class="checkBox">
-                                          <input type="radio" name="maj[]" id="majCli" value="Par le client" />
-                                          <label for="majCli">Par le client</label>
-                                    </div>
-                              </div>
-                              <div class="formBox">
-                                    <p class="formTitre titre11">Formations</p>
-                                    <hr />
-                                    <p class="form_sous_titre">Formation(s) souhaitée(s)</p>
-                                    <div class="checkBox_row">
-                                          <div class="checkBox">
-                                                <input type="checkbox" class="chkBox" name="formation[]" id="formAdmin" value="Administration du site" />
-                                                <label for="formAdmin">Administration du site</label>
-                                          </div>
-                                          <div class="checkBox">
-                                                <input type="checkbox" class="chkBox" name="formation[]" id="SEO" value="SEO" />
-                                                <label for="SEO">SEO / Référencement</label>
-                                          </div>
-                                          <div class="checkBox">
-                                                <input type="checkbox" class="chkBox" name="formation[]" id="formMark" value="Publicité" />
-                                                <label for="formMark">Publicité</label>
-                                          </div>
-                                          <div class="checkBox">
-                                                <input type="checkbox" class="chkBox" name="formation[]" id="formResaeu" value="Réseaux sociaux" />
-                                                <label for="formResaeu">Réseaux sociaux</label>
-                                          </div>
-                                          <div class="checkBox">
-                                                <input type="checkbox" class="chkBox" name="formation[]" id="formNews" value="Newsletter" />
-                                                <label for="formNews">Newsletter</label>
-                                          </div>
-                                          <div class="checkBox">
-                                                <input type="checkbox" class="chkBox" name="formation[]" id="formAnalys" value="Analyse du marché / Statistiques" />
-                                                <label for="formAnalys">Analyse du marché / Statistiques</label>
-                                          </div>
-                                    </div>
-                                    <textarea placeholder="Autre(s)" name="autreForma" rows="5"></textarea>
-                              </div>
-                              <div class="formBox">
-                                    <p class="formTitre titre12">Nom de domaine et hébergement</p>
-                                    <hr />
-                                    <p class="form_sous_titre">L'enregistrement du nom de domaine et l'hébergement sont pris en charge</p>
-                                    <div class="checkBox">
-                                          <input type="radio" name="domaine[]" id="domCli" value="Par le client" />
-                                          <label for="domCli">Par le client</label>
-                                    </div>
-                                    <div class="checkBox">
-                                          <input type="radio" name="domaine[]" id="domAgen" value="Par l'agence" />
-                                          <label for="domAgen">Par l'agence</label>
-                                    </div>
-                              </div>
-                              <div class="formBox">
-                                    <p class="formTitre titre13">Remarque éventuelle</p>
-                                    <hr />
-                                    <textarea placeholder="Remarque(s) éventuelle(s)" name="remarq" cols="50" rows="7"></textarea>
-                              </div>
-                              <div class="formBox">
-                                    <p class="formTitre titre14">Contacts du projet</p>
-                                    <hr />
-                                    <textarea placeholder="Nom Prénom - Fonction : tel - mail&#10;John Doe - Gérant : 06.06.06.06.06 - contact@mail.com" name="contact" rows="10"></textarea>
-                              </div>
-                              <input id="btn-form" type="submit" name="submit" value="Générer le cahier des charges" />
-                        </form>
-                  </div>
-            </section>
-            <footer>
-                  <h2>Powered by <a href="https://roofline.fr" target="_blank">Roofline.fr</a></h2>
-            </footer>
-            <section class="postFooter">
-                  <p>Développé par <a href="https://tristan-viard.fr" target="_blank">Tristan Viard</a></p>
-            </section>
-            <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-      </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Roofline Blueprint</title>
+		<meta name="description" content="Optimisez votre projet, remplissez simplement les formulaires avec les informations de votre projet et obtenez rapidement un cahier des charges personnalisé" />
+		<meta name="robots" content="noindex" />
+		<meta name="googlebot" content="noindex" />
+		<!-- css -->
+		<link rel="stylesheet" href="./assets/CSS/normalize.css" />
+		<link rel="stylesheet" href="./assets/CSS/main.css" />
+		<link rel="stylesheet" href="./assets/CSS/form.css" />
+		<!-- font Awesome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+	</head>
+	<body>
+		<header>
+			<div class="headTxt">
+				<h1><span>Roofline</span> Blueprint</h1>
+				<h2>Génération de votre cahier des charges</h2>
+				<a href="#editor" class="btnRemplir">
+					<div class="icons">
+						<i class="fa-solid fa-arrow-right icon-default"></i>
+						<i class="fa-solid fa-check icon-hover"></i>
+					</div>
+					Je remplis le formulaire
+				</a>
+			</div>
+			<div class="headImg">
+				<img src="./assets/imgs/Clay_Green0001.png" alt="" />
+			</div>
+		</header>
+		<section class="etapesSection">
+			<p class="wow"><span>WAOUW!</span> Vous avez choisi l'agence Roofline pour votre projet web ! MERCI 💚</p>
+			<p class="titreEtape">Quelles sont les étapes de votre projet ?</p>
+			<hr class="etapesHR" />
+			<ul>
+				<li>Après étude de votre projet et de vos besoin, l'agence Roofline vous fait une proposition de devis</li>
+				<li>Après acceptation, vous recevez une demande d'acompte de 50%</li>
+				<li>Nous définissons ensemble le cahier des charges opérationnel</li>
+				<li>En cas d'ajout de modules ou de demandes supplémentaires, l'agence Roofline fait un devis annexe</li>
+				<li>Une fois validé, nos développeurs installent une version de pré-production sécurisée sur les serveurs de l'agence</li>
+				<li>Après intégration de votre charte graphique et des éléments techniques de base, nous faisons un point d'avancement du projet ensemble</li>
+				<li>Après intégration des contenus multimédias (images, vidéos, textes), nous optimisons votre site pour le responsive et le SEO</li>
+				<li>La pré-production optimisée, il ne vous manquera plus qu'à la valider après test et ajustements</li>
+				<li>Préparez votre campagne de lancement, le site sera mis en ligne à la date définie, faisons une réunion de lancement pour en discuter ?</li>
+				<li>Notre équipe vous forme à l'utilisation et l'administration de votre site (c'est éligible à la prise en charge OPCO!)</li>
+				<li>3 mois après, un point statistique s'impose, revoyons-nous pour en parler !</li>
+			</ul>
+			<p class="titreEtape">Pourquoi un cahier des charges ?</p>
+			<hr class="etapesHR" />
+			<p class="infoP">
+				Le cahier des charges sera votre/notre ligne conductrice tout au long du développement du projet.<br />
+				Il nous fait gagner un temps considérable, nous permet de s'assurer que toutes vos attentes et vos exigences soient définies.<br />
+				Nos développeurs n'en seront que plus efficaces !<br />
+				C'est aussi un document qui vous/nous protège.<br />
+				De notre côté, il nous permet d'ajuster le devis si nous constatons un écart entre vos attentes et notre première proposition.<br />
+				De votre côté, il vous assure une trace écrite de l'ensemble des composantes de votre futur site !<br />
+				Vous ne payerez le solde de notre collaboration seulement quand l'ensemble de ce qui avait été convenu dans le présent cahier des charges sera en ligne.<br />
+			</p>
+			<p class="titreEtape">Que dois-je faire ?</p>
+			<hr class="etapesHR" />
+			<p class="infoP">
+				Laissez-vous guider à travers ce formulaire.<br />
+				Vous n'avez pas la réponse aux questions posées ? Pas d'inquiétude, nous reviendrons vers vous pour vulgariser tout ça.<br />
+				Roofline Blueprint vous permettra de générer un cahier des charges en quelques minutes seulement. <br />
+				Le cahier des charges est alors généré automatiquement, vous pouvez par la suite l'enregistrer sur votre ordinateur afin de nous l'envoyer par mail.<br />
+			</p>
+		</section>
+		<section class="form_section">
+			<div class="form_container" id="editor">
+				<h3>Informations sur votre projet</h3>
+				<form action="generate.php" method="post" target="_blank" id="content">
+					<div class="formBox">
+						<p class="formTitre titre1">Présentation du projet</p>
+						<hr />
+						<input placeholder="Nom du site" name="nomSite" type="text" id="nomSite" value="" />
+						<input placeholder="Thématique du site" name="themeSite" type="text" id="themeSite" value="" />
+						<textarea placeholder="Description du site" name="description" rows="5" id="descSite"></textarea>
+						<input placeholder="URL du site" name="adrSite" type="text" id="adrSite" value="" />
+						<br />
+						<br />
+						<div class="helpDiv">
+							<p class="form_sous_titre">Extension(s) complémentaire(s)</p>
+							<div class="helpBulle" aria-hidden="true">
+								<i class="fa-solid fa-question-circle"></i>
+								<span> Chaque extensions complémentaires ajoutées seront facturées par l'hébergeur. </span>
+							</div>
+						</div>
+						<div class="checkBox_row">
+							<div class="checkBox">
+								<input type="checkbox" name="extension[]" id="fr" value=".fr" />
+								<label for="fr" class="form-control">.fr</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" name="extension[]" id="be" value=".be" />
+								<label for="be" class="form-control">.be</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" name="extension[]" id="com" value=".com" />
+								<label for="com" class="form-control">.com</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" name="extension[]" id="org" value=".org" />
+								<label for="org" class="form-control">.org</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" name="extension[]" id="net" value=".net" />
+								<label for="net" class="form-control">.net</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" name="extension[]" id="es" value=".es" />
+								<label for="es" class="form-control">.es</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" name="extension[]" id="en" value=".en" />
+								<label for="en" class="form-control">.en</label>
+							</div>
+						</div>
+						<input placeholder="Autre(s)" name="autreExt" type="text" id="autreExt" value="" />
+					</div>
+					<div class="formBox">
+						<p class="formTitre titre2">Objectifs du site</p>
+						<hr />
+						<p class="form_sous_titre">Portée du site</p>
+						<div class="radioBox">
+							<input type="radio" name="porte[]" id="butCom" value="commercial" />
+							<label for="butCom">Site à but commercial</label>
+						</div>
+						<div class="radioBox">
+							<input type="radio" name="porte[]" id="butNoCom" value="non commercial" />
+							<label for="butNoCom">Site à but non commercial</label>
+						</div>
+						<br />
+						<p class="form_sous_titre">Type de site</p>
+						<div class="radioBox">
+							<input type="radio" name="type[]" id="vitrine" value="Site vitrine" />
+							<label for="vitrine" class="form-control">Site vitrine</label>
+						</div>
+						<div class="radioBox">
+							<input type="radio" name="type[]" id="e-commerce" value="e-commerce" />
+							<label for="e-commerce" class="form-control">e-commerce</label>
+						</div>
+						<input placeholder="Autre(s)" name="autreType" type="text" id="autreType" value="" />
+						<textarea placeholder="Objectif(s) du site" name="objectif" rows="7" id="objectif"></textarea>
+						<input placeholder="Public cible" name="public" type="text" id="public" value="" />
+					</div>
+					<div class="formBox">
+						<p class="formTitre titre3">Fonctionnalités attendues</p>
+						<hr />
+						<div class="checkBox_row">
+							<div class="checkBox">
+								<input type="checkbox" name="fonction[]" id="Avis" value="Avis clients" />
+								<label for="Avis">Avis clients</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" name="fonction[]" id="Agenda" value="Agenda" />
+								<label for="Agenda">Agenda</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" name="fonction[]" id="Devis" value="Devis" />
+								<label for="Devis">Devis</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" name="fonction[]" id="Formulaire" value="Formulaire" />
+								<label for="Formulaire">Formulaire</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" name="fonction[]" id="Galerie" value="Galerie photos" />
+								<label for="Galerie">Galerie photos</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" name="fonction[]" id="Newsletter" value="Newsletter" />
+								<label for="Newsletter">Newsletter</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" name="fonction[]" id="Reservations" value="Reservations" />
+								<label for="Reservations">Réservations</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" name="fonction[]" id="FAQ" value="FAQ" />
+								<label for="FAQ">FAQ</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" name="fonction[]" id="ChatBot" value="ChatBot" />
+								<label for="ChatBot">ChatBot</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" name="fonction[]" id="Blog" value="Blog" />
+								<label for="Blog">Blog</label>
+							</div>
+						</div>
+						<textarea placeholder="Autres fonctionnalités attendues (veillez à être le plus précis possible)" name="autreFonction" rows="5" id="autreFonction"></textarea>
+					</div>
+					<div class="formBox">
+						<p class="formTitre titre4">Organisation et navigation</p>
+						<hr />
+						<div class="helpDiv">
+							<p class="form_sous_titre">Plan du site</p>
+							<div class="helpBulle" aria-hidden="true">
+								<i class="fa-solid fa-question-circle"></i>
+								<span
+									>Pour définir simplement le plan du site, veuillez indiquer les différents menus que vous comptez utiliser en les présentant de la sorte:<br />
+									1- Acceuil<br />
+									2- Notre catalogue<br />
+									2.1- Produits A<br />
+									2.2- Produits B<br />
+									3- Contact<br />
+									4- etc...</span
+								>
+							</div>
+						</div>
+						<textarea placeholder="Menu principal (et menus secondaires)" name="planSite" id="planSite" rows="5"></textarea>
+					</div>
+					<div class="formBox">
+						<p class="formTitre titre5">Intégration des contenus</p>
+						<hr />
+						<p class="form_sous_titre">Qui intègre les contenus?</p>
+						<div class="checkBox">
+							<input type="radio" name="integration[]" id="contAgenCli" value="Intégration des contenus de base par l'agence puis des contenus nouveaux par le client" />
+							<label for="contAgenCli">Intégration des contenus de base par l'agence puis des contenus nouveaux par le client</label>
+						</div>
+						<div class="checkBox">
+							<input type="radio" name="integration[]" id="contClient" value="Intégration de tous les contenus par le client" />
+							<label for="contClient">Intégration de tous les contenus par le client</label>
+						</div>
+						<div class="checkBox">
+							<input type="radio" name="integration[]" id="contAgence" value="Intégration de tous les contenus par l'agence" />
+							<label for="contAgence">Intégration de tous les contenus par l'agence</label>
+						</div>
+						<br />
+						<p class="form_sous_titre">Qui fournit les contenus?</p>
+						<div class="checkBox">
+							<input type="radio" name="origineContenu[]" id="client" value="Le client fournit tous les contenus: textes, images etc..." />
+							<label for="client">Le client fournit tous les contenus: textes, images etc...</label>
+						</div>
+						<div class="checkBox">
+							<input type="radio" name="origineContenu[]" id="agence" value="L'agence propose les contenus: rédaction des textes, recherche d'images etc..." />
+							<label for="agence">L'agence propose les contenus: rédaction des textes, recherche d'images etc...</label>
+						</div>
+						<div class="checkBox">
+							<input type="radio" name="origineContenu[]" id="agenCli" value="Le client et l'agence fournissent des contenus" />
+							<label for="agenCli">Le client et l'agence fournissent des contenus</label>
+						</div>
+					</div>
+					<div class="formBox">
+						<p class="formTitre titre6">Charte graphique</p>
+						<hr />
+						<div class="helpDiv">
+							<p class="form_sous_titre">Disposez-vous déjà d'une charte graphique?</p>
+							<div class="helpBulle" aria-hidden="true">
+								<i class="fa-solid fa-question-circle"></i>
+								<span>Utilisez-vous des couleurs qui vous caractérisent? Une ou plusieurs polices d'écritures spécifiques? Utilisez-vous un logo? Autant déléments qui définissent votre charte graphique.</span>
+							</div>
+						</div>
+						<div class="checkBox">
+							<input type="radio" name="charteExist[]" id="charte" value="Oui" />
+							<label for="charte">Oui</label>
+						</div>
+						<div class="checkBox">
+							<input type="radio" name="charteExist[]" id="charteno" value="Non" />
+							<label for="charteno">Non</label>
+						</div>
+						<br />
+						<p class="form_sous_titre">Design du site</p>
+						<div class="checkBox">
+							<input type="radio" name="charte[]" id="designMes" value="Création d'un design sur mesure" />
+							<label for="designMes">Création d'un design sur mesure (Nous réalisons une maquette)</label>
+						</div>
+						<div class="checkBox">
+							<input type="radio" name="charte[]" id="designCh" value="Choix d'un design parmi des modèles existants" />
+							<label for="designCh">Choix d'un design parmi des modèles existants (Template)</label>
+						</div>
+						<div class="checkBox">
+							<input type="radio" name="charte[]" id="designAd" value="Adaptation d'un design parmi des modèles existants" />
+							<label for="designAd">Adaptation d'un design parmi des modèles existants (Template)</label>
+						</div>
+						<br />
+						<p class="form_sous_titre">Logo du site</p>
+						<div class="checkBox">
+							<input type="radio" name="logo[]" id="logoMes" value="Création d'un logo sur mesure" />
+							<label for="logoMes">Création d'un logo sur mesure</label>
+						</div>
+						<div class="checkBox">
+							<input type="radio" name="logo[]" id="logoRet" value="Retouche et intégration d'un logo déjà existant" />
+							<label for="logoRet">Retouche et intégration d'un logo déjà existant</label>
+						</div>
+						<div class="checkBox">
+							<input type="radio" name="logo[]" id="logoEx" value="Intégration d'un logo déjà existant" />
+							<label for="logoEx">Intégration d'un logo déjà existant</label>
+						</div>
+						<br />
+						<p class="form_sous_titre">Style de site</p>
+						<div class="checkBox_row">
+							<div class="checkBox">
+								<input type="checkbox" name="style[]" id="Sobr" value="Sobre" />
+								<label for="Sobr">Sobre</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" name="style[]" id="Mod" value="Moderne" />
+								<label for="Mod">Moderne</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" name="style[]" id="Retro" value="Rétro" />
+								<label for="Retro">Rétro</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" name="style[]" id="Color" value="Coloré" />
+								<label for="Color">Coloré</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" name="style[]" id="Fant" value="Fantaisie" />
+								<label for="Fant">Fantaisie</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" name="style[]" id="Graphique" value="Graphique" />
+								<label for="Graphique">Graphique</label>
+							</div>
+						</div>
+						<input placeholder="Autre(s)" name="autreStyle" type="text" value="" />
+						<br />
+						<p class="form_sous_titre">Exemples de sites qui vous inspirent</p>
+						<textarea placeholder="Copiez les adresses de sites que vous appréciez" name="exempleSite" rows="5"></textarea>
+					</div>
+					<div class="formBox">
+						<p class="formTitre titre7">Traductions et Langues</p>
+						<hr />
+						<p class="form_sous_titre">Langue d'origine du site</p>
+						<input placeholder="Langue d'origine" name="langue" type="text" value="" />
+						<br />
+						<p class="form_sous_titre">Traductions</p>
+						<div class="checkBox_row">
+							<div class="checkBox">
+								<input type="checkbox" class="chkBox" name="traduction[]" id="-fr" value="Français" />
+								<label for="-fr">Français</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" class="chkBox" name="traduction[]" id="-en" value="Anglais" />
+								<label for="-en">Anglais</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" class="chkBox" name="traduction[]" id="-es" value="Espagnol" />
+								<label for="-es">Espagnol</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" class="chkBox" name="traduction[]" id="-it" value="Italien" />
+								<label for="-it">Italien</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" class="chkBox" name="traduction[]" id="-de" value="Allemand" />
+								<label for="-de">Allemand</label>
+							</div>
+						</div>
+						<input placeholder="Autre(s)" name="autreLangue" type="text" value="" />
+					</div>
+					<div class="formBox">
+						<p class="formTitre titre8">Référencement</p>
+						<hr />
+						<p class="form_sous_titre">Service(s) souhaité(s)</p>
+						<div class="checkBox_row">
+							<div class="checkBox">
+								<input type="checkbox" class="chkBox" name="serviceSEO[]" id="Audit" value="Audit" />
+								<label for="Audit">Audit</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" class="chkBox" name="serviceSEO[]" id="mots" value="Recherche de mots clés" />
+								<label for="mots">Recherche de mots clés</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" class="chkBox" name="serviceSEO[]" id="Opti" value="Optimisation des pages" />
+								<label for="Opti">Optimisation des pages</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" class="chkBox" name="serviceSEO[]" id="Stat" value="Statistiques" />
+								<label for="Stat">Statistiques</label>
+							</div>
+						</div>
+					</div>
+					<div class="formBox">
+						<p class="formTitre titre9">Marketing</p>
+						<hr />
+						<p class="form_sous_titre">Service(s) souhaité(s)</p>
+						<div class="checkBox_row">
+							<div class="checkBox">
+								<input type="checkbox" class="chkBox" name="marketing[]" id="News" value="Newsletter" />
+								<label for="News">Newsletter</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" class="chkBox" name="marketing[]" id="reseau" value="Réseaux sociaux" />
+								<label for="reseau">Gestion des réseaux sociaux</label>
+							</div>
+						</div>
+					</div>
+					<div class="formBox">
+						<p class="formTitre titre10">Maintenance</p>
+						<hr />
+						<p class="form_sous_titre">Sauvegardes</p>
+						<div class="checkBox">
+							<input type="radio" name="sauvegarde[]" id="man" value="Manuelles" />
+							<label for="man">Manuelles</label>
+						</div>
+						<div class="checkBox">
+							<input type="radio" name="sauvegarde[]" id="auto" value="Automatiques" />
+							<label for="auto">Automatiques</label>
+						</div>
+						<div class="checkBox">
+							<input type="radio" name="sauvegarde[]" id="savNo" value="Pas de sauvegarde" />
+							<label for="savNo">Pas de sauvegarde</label>
+						</div>
+						<br />
+						<p class="form_sous_titre">Mises à jour</p>
+						<div class="checkBox">
+							<input type="radio" name="maj[]" id="majAgen" value="Par l'agence" />
+							<label for="majAgen">Par l'agence</label>
+						</div>
+						<div class="checkBox">
+							<input type="radio" name="maj[]" id="majCli" value="Par le client" />
+							<label for="majCli">Par le client</label>
+						</div>
+					</div>
+					<div class="formBox">
+						<p class="formTitre titre11">Formations</p>
+						<hr />
+						<p class="form_sous_titre">Formation(s) souhaitée(s)</p>
+						<div class="checkBox_row">
+							<div class="checkBox">
+								<input type="checkbox" class="chkBox" name="formation[]" id="formAdmin" value="Administration du site" />
+								<label for="formAdmin">Administration du site</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" class="chkBox" name="formation[]" id="SEO" value="SEO" />
+								<label for="SEO">SEO / Référencement</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" class="chkBox" name="formation[]" id="formMark" value="Publicité" />
+								<label for="formMark">Publicité</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" class="chkBox" name="formation[]" id="formResaeu" value="Réseaux sociaux" />
+								<label for="formResaeu">Réseaux sociaux</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" class="chkBox" name="formation[]" id="formNews" value="Newsletter" />
+								<label for="formNews">Newsletter</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" class="chkBox" name="formation[]" id="formAnalys" value="Analyse du marché / Statistiques" />
+								<label for="formAnalys">Analyse du marché / Statistiques</label>
+							</div>
+						</div>
+						<textarea placeholder="Autre(s)" name="autreForma" rows="5"></textarea>
+					</div>
+					<div class="formBox">
+						<p class="formTitre titre12">Nom de domaine et hébergement</p>
+						<hr />
+						<p class="form_sous_titre">L'enregistrement du nom de domaine et l'hébergement sont pris en charge</p>
+						<div class="checkBox">
+							<input type="radio" name="domaine[]" id="domCli" value="Par le client" />
+							<label for="domCli">Par le client</label>
+						</div>
+						<div class="checkBox">
+							<input type="radio" name="domaine[]" id="domAgen" value="Par l'agence" />
+							<label for="domAgen">Par l'agence</label>
+						</div>
+					</div>
+					<div class="formBox">
+						<p class="formTitre titre13">Remarque éventuelle</p>
+						<hr />
+						<textarea placeholder="Remarque(s) éventuelle(s)" name="remarq" cols="50" rows="7"></textarea>
+					</div>
+					<div class="formBox">
+					      <p class="formTitre titre14">Contacts du projet</p>
+						<hr />
+						<textarea placeholder="Nom Prénom - Fonction : tel - mail&#10;John Doe - Gérant : 06.06.06.06.06 - contact@mail.com" name="contact" rows="10"></textarea>
+					</div>
+					<input id="btn-form" type="submit" name="submit" value="Générer le cahier des charges" />
+				</form>
+			</div>
+		</section>
+		<footer>
+			<h2>Powered by <a href="https://roofline.fr" target="_blank">Roofline.fr</a></h2>
+		</footer>
+		<section class="postFooter">
+			<p>Développé par <a href="https://tristan-viard.fr" target="_blank">Tristan Viard</a></p>
+		</section>
+		<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+	</body>
 </html>
