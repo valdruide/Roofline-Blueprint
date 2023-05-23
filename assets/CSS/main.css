@@ -126,22 +126,60 @@ header img {
       width: 100%;
 }
 
-.info_section {
+.etapesSection {
       padding: 60px 10vw;
-
-      background: rgba(54, 85, 136, 0.458);
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.399);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.3);
+      background-color: var(--secondaryColor);
 }
 
-.info_section h2 {
-      font-size: 2.3rem;
+.wow{
+      font-size: 1.6rem;
+      text-align: center;
+}
+
+.wow span:nth-child(1){
+      font-weight: 800;
+}
+
+.titreEtape{
+      font-size: 2rem;
+      font-weight: 700;
       color: var(--mainColor);
+      margin: 0;
+      margin-top: 50px;
 }
-.info_section p {
-      font-size: 19px;
+
+.etapesHR{
+      width: 15%;
+      height: 3px;
+      border-radius: 25px;
+      background-color: var(--mainColor);
+}
+
+.etapesSection ul{
+      list-style: none;
+      font-size: 18px;
+      padding: 0;
+}
+
+.etapesSection ul li{
+      display: inline-flex;
+      align-items: center;
+      width: 100%;
+
+}
+
+.etapesSection ul li::before{
+      content: '';
+      background-color: #60ff80;
+      height: 7px;
+      width: 7px;
+      border-radius: 25px;
+      margin-right: 10px;
+      margin-bottom: 5px;
+}
+
+.infoP{
+      font-size: 18px;
       text-align: justify;
 }
 
