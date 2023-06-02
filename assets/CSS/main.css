@@ -1,3 +1,4 @@
+
 :root {
 	--mainColor: #60ff80;
 	--secondaryColor: #182436;
@@ -133,33 +134,61 @@ header img {
 	background-color: var(--secondaryColor);
 	background-image: url('https://i.postimg.cc/ZKXDLmYK/bacground-sectionetapes.png');
 	background-repeat: no-repeat;
+	background-attachment: fixed;
 	background-size: cover;
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	flex-direction: column;
 }
 
 .wow {
 	font-size: 2rem;
-	text-align: left;
-	margin-left: 5rem;
+	text-align: center;
 }
 
 .wow span:nth-child(1) {
 	font-weight: 800;
 }
 
-.box_titreEtape{
-	width: fit-content; 
+.container_etapesSetion{
+	border: 2px solid #fff;
+	background-color: rgba(30, 30, 30, 0.7);
+	box-shadow: #60ff80 0px 7px 29px 0px;
+	width: 80%;
 }
 
+.container_etapesSetion:first-child{
+	margin: auto;
+}
+
+
+.container_etapesSection_flex{
+	display: flex;
+	justify-content: flex-end;
+	gap: 1rem;
+	padding: 0 1rem;
+	margin: auto;
+}
+
+.container_titre{
+	height: 8rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
 .titreEtape {
-	font-size: 3rem;
+	font-size: 2rem;
 	font-weight: 700;
 	color: transparent;
 	-webkit-text-stroke: 1px #fff;
 	-webkit-background-clip: text;
 	margin: 0;
-	margin-left: 5rem;
-	margin-top: 50px;
 	text-transform: uppercase;
+	text-align: center;
+	padding: 1rem 0;
 }
 
 .etapesHR {
@@ -167,39 +196,17 @@ header img {
 	height: 3px;
 	border-radius: 25px;
 	background-color: var(--mainColor);
+	margin: 0;
 	
 }
 
 .etapesSection img{
 	margin-left: 5%;
-	padding: 1rem;
+	width: 5%;
 }
 
-.etapesSection ul {
-	list-style: none;
-    font-size: 18px;
-    padding: 1rem;
-    width: 70%;
-    border: 2px solid #fff;
-    margin-left: 6%;
-	background-color: rgba(30, 30, 30, 0.7);
-	line-height: 2rem;
-	box-shadow: #60ff80 0px 7px 29px 0px;
-}
 
-.etapesSection ul li {
-	display: inline-flex;
-	align-items: center;
-	width: 100%;
-}
-
-.etapesSection ul li span{
-	color: var(--mainColor);
-	font-weight: bold;
-	padding: 0 5px;
-}
-
-.etapesSection ul li::before {
+/* .etapesSection ul li::before {
 	content: "";
 	background-color: #60ff80;
 	height: 7px;
@@ -207,18 +214,13 @@ header img {
 	border-radius: 25px;
 	margin-right: 10px;
 	margin-bottom: 5px;
-}
+} */
 
 .infoP {
 	font-size: 18px;
 	text-align: justify;
-	padding: 1rem;
-    width: 70%;
-    border: 2px solid #fff;
-    margin-left: 6%;
-	background-color: rgba(30, 30, 30, 0.7);
+	padding: 1rem 2rem;
 	line-height: 1.7rem;
-	box-shadow: #60ff80 0px 7px 29px 0px;
 }
 
 
@@ -297,10 +299,31 @@ footer a:hover {
 	.info_section p {
 		font-size: 18px;
 	}
+
+	.infoP{
+		font-size: 16px;
+	}
+
+	.container_titre {
+		height: 15rem;
+	}
 }
 
 @media (max-width: 1024px) {
 	.headImg {
 		display: none;
 	}
+
+	.container_etapesSection_flex{
+		flex-direction: column;
+		align-items: center;
+	}
+	.infoP{
+		text-align: left;
+	}
+
+	.titreEtape{
+		padding: 1rem 1rem;
+	}
+
 }
