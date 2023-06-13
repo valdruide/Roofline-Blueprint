@@ -28,7 +28,28 @@
         <p><span>Nom du site: </span><?php echo $_POST["nomSite"]; ?></p>
         <p><span>Theme du site: </span><?php echo $_POST["themeSite"]; ?></p>
         <p><span>Description: </span><?php echo $_POST["description"]; ?></p>
-        <p><span>URL: </span><?php echo $_POST["adrSite"]; ?></p>
+        <?php
+            if(!empty($_POST['marque'])){
+                foreach($_POST['marque'] as $value){
+                    echo "<p><span>J'ai déposé mon nom à l'INPI ? </span>".$value.'</p>';
+                }
+            }
+        ?>
+        <?php
+            if(!empty($_POST['nomDomaine'])){
+                foreach($_POST['nomDomaine'] as $value){
+                    echo "<p><span>Nom de domaine: </span>".$value.'</p>';
+                }
+            }
+        ?>
+        <p><span>Domaine: </span><?php echo $_POST["adrSite"]; ?></p>
+        <?php
+            if(!empty($_POST['mailPro'])){
+                foreach($_POST['mailPro'] as $value){
+                    echo "<p><span>J'ai déjà un email pro ? </span>".$value.'</p>';
+                }
+            }
+        ?>
         <?php
             if(!empty($_POST['extension'])){
                 foreach($_POST['extension'] as $value){
@@ -57,6 +78,14 @@
     <p><span>Autre type de site: </span><?php echo $_POST["autreType"]; ?></p>
     <p><span>Objectif(s): </span><?php echo $_POST["objectif"]; ?></p>
     <p><span>Public cible: </span><?php echo $_POST["public"]; ?></p>
+    <?php
+            if(!empty($_POST['cms'])){
+                foreach($_POST['cms'] as $value){
+                    echo "<p><span>CMS souhaité: </span>".$value.'</p>';
+                }
+            }
+    ?>
+    <p><span>Autre CMS (Si aucun choisi): </span><?php echo $_POST["autreCms"]; ?></p>
     <h2>Fonctionnalités attendues</h2>
     <?php
             if(!empty($_POST['fonction'])){
@@ -71,6 +100,40 @@
     <h2>Organisation et navigation</h2>
     <p><span>Plan du site: </span><?php echo $_POST["planSite"]; ?></p>
     <h2>Intégration des contenus</h2>
+    <p><span>Qui rédige :</span></p>
+    <p><span>Story Telling: </span><?php echo $_POST["redacStory"]; ?></p>
+    <p><span>Description catégories: </span><?php echo $_POST["redacDescCat"]; ?></p>
+    <p><span>Description produit: </span><?php echo $_POST["redacDescProduct"]; ?></p>
+    <p><span>Article de blog: </span><?php echo $_POST["redacBlog"]; ?></p>
+    <p><span>Catégorie de blog: </span><?php echo $_POST["redacCatBlog"]; ?></p>
+    <p><span>Pour chaque type de contenu: </span><?php echo $_POST["redacOpti"]; ?></p>
+    <?php
+            if(!empty($_POST['redacType'])){
+                foreach($_POST['redacType'] as $value){
+                    echo "<p><span>Nous rédigeons: </span>".$value.'</p>';
+                }
+            } else {
+                echo "<p><span>Nous rédigeons: //</span></p>";
+            }
+    ?>
+    <?php
+            if(!empty($_POST['imageType'])){
+                foreach($_POST['imageType'] as $value){
+                    echo "<p><span>Contenus images: </span>".$value.'</p>';
+                }
+            } else {
+                echo "<p><span>Contenus images: //</span></p>";
+            }
+    ?>
+    <?php
+            if(!empty($_POST['videoType'])){
+                foreach($_POST['videoType'] as $value){
+                    echo "<p><span>Contenus vidéo: </span>".$value.'</p>';
+                }
+            } else {
+                echo "<p><span>Contenus vidéo: //</span></p>";
+            }
+    ?>
     <?php
             if(!empty($_POST['integration'])){
                 foreach($_POST['integration'] as $value){
@@ -133,13 +196,31 @@
     <?php
             if(!empty($_POST['serviceSEO'])){
                 foreach($_POST['serviceSEO'] as $value){
-                    echo "<p><span>Service souhaité: </span>".$value.'</p>';
+                    echo "<p><span>Référencement technique: </span>".$value.'</p>';
                 }
             } else {
-                echo "<p><span>Service souhaité: Aucun</span></p>";
+                echo "<p><span>Référencement technique: Aucun</span></p>";
             }
     ?>
-    <h2>Marketing</h2>
+    <?php
+            if(!empty($_POST['refTxt'])){
+                foreach($_POST['refTxt'] as $value){
+                    echo "<p><span>Référencement textuel: </span>".$value.'</p>';
+                }
+            } else {
+                echo "<p><span>Référencement textuel: Aucun</span></p>";
+            }
+    ?>
+    <?php
+            if(!empty($_POST['etude'])){
+                foreach($_POST['etude'] as $value){
+                    echo "<p><span>Etude de marché: </span>".$value.'</p>';
+                }
+            } else {
+                echo "<p><span>Etude de marché: Aucune</span></p>";
+            }
+    ?>
+    <h2>Webmarketing</h2>
     <?php
             if(!empty($_POST['marketing'])){
                 foreach($_POST['marketing'] as $value){
@@ -187,6 +268,7 @@
     <p><span>Remarques: </span><?php echo $_POST["remarq"]; ?></p>
     <h2>Contacts du projet</h2>
     <p><span>Contact(s): </span><?php echo $_POST["contact"]; ?></p>
+    <p><span>Date de mise en ligne: </span><?php echo $_POST["dateProd"]; ?></p>
     <p class='generatedBy'>Généré par <span>https://roofline.fr</span></p>
 </div>
     <a href="javascript:generatePDF()">Dowload PDF</a>

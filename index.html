@@ -109,11 +109,11 @@
 						<br />
 						<p class="form_sous_titre">Nom de domaine</p>
 							<div class="radioBox">
-								<input type="radio" name="domaine[]" id="domaineOui" value="J'ai mon nom de domaine" />
+								<input type="radio" name="nomDomaine[]" id="domaineOui" value="J'ai mon nom de domaine" />
 								<label for="domaineOui">J'ai déjà réservé mon nom de domaine</label>
 							</div>
 							<div class="radioBox">
-								<input type="radio" name="domaine[]" id="domaineNon" value="Je n'ai pas mon nom de domaine" />
+								<input type="radio" name="nomDomaine[]" id="domaineNon" value="Je n'ai pas mon nom de domaine" />
 								<label for="domaineNon">J'ai besoin d'assistance pour réserver mon nom de domaine</label>
 							</div>
 						<input placeholder="Nom de domaine" name="adrSite" type="text" id="adrSite" value="" />
@@ -218,13 +218,10 @@
 								<label for="Sur-mesure">Sur-mesure</label>
 							</div>
 							<div class="radioBox">
-								<input type="radio" name="cms[]" id="cmsAutre" value="Autre" />
-								<label for="cmsAutre">Autre</label>
-							</div>
-							<div class="radioBox">
 								<input type="radio" name="cms[]" id="cmsUnknown" value="Je ne sais pas" />
 								<label for="cmsUnknown">Je ne sais pas</label>
 							</div>
+						<input placeholder="Autre" name="autreCms" type="text" id="autreCms" value="" />
 					</div>
 					<div class="formBox">
 						<div class="helpDiv">
@@ -568,19 +565,19 @@
 						<p class="form_sous_titre">Référencement textuel</p>
 						<div class="checkBox_row">
 							<div class="checkBox">
-								<input type="checkbox" class="chkBox" name="refTechnique[]" id="redacTitle" value="Rédaction des meta title" />
+								<input type="checkbox" class="chkBox" name="refTxt[]" id="redacTitle" value="Rédaction des meta title" />
 								<label for="redacTitle">Rédaction des meta title (titres)</label>
 							</div>
 							<div class="checkBox">
-								<input type="checkbox" class="chkBox" name="refTechnique[]" id="redacDesc" value="Rédaction des meta description" />
+								<input type="checkbox" class="chkBox" name="refTxt[]" id="redacDesc" value="Rédaction des meta description" />
 								<label for="redacDesc">Rédaction des meta description</label>
 							</div>
 							<div class="checkBox">
-								<input type="checkbox" class="chkBox" name="refTechnique[]" id="hx" value="Révision du balisage HX" />
+								<input type="checkbox" class="chkBox" name="refTxt[]" id="hx" value="Révision du balisage HX" />
 								<label for="hx">Révision du balisage HX (hiérarchie du site)</label>
 							</div>
 							<div class="checkBox">
-								<input type="checkbox" class="chkBox" name="refTechnique[]" id="maillage" value=">Maillage interne" />
+								<input type="checkbox" class="chkBox" name="refTxt[]" id="maillage" value="Maillage interne" />
 								<label for="maillage">Maillage interne</label>
 							</div>
 						</div>
@@ -598,17 +595,65 @@
 						</div>
 					</div>
 					<div class="formBox">
-						<p class="formTitre titre9">Marketing</p>
+						<p class="formTitre titre9">Webmarketing</p>
 						<hr />
 						<p class="form_sous_titre">Service(s) souhaité(s)</p>
 						<div class="checkBox_row">
+							<div class="checkBox">
+								<input type="checkbox" class="chkBox" name="marketing[]" id="mediaplanning" value="Médiaplanning" />
+								<label for="mediaplanning">Conception d'un médiaplanning</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" class="chkBox" name="marketing[]" id="rapportStat" value="Rapport statistiques" />
+								<label for="rapportStat">Rapport statistiques</label>
+							</div>
 							<div class="checkBox">
 								<input type="checkbox" class="chkBox" name="marketing[]" id="News" value="Newsletter" />
 								<label for="News">Newsletter</label>
 							</div>
 							<div class="checkBox">
-								<input type="checkbox" class="chkBox" name="marketing[]" id="reseau" value="Réseaux sociaux" />
-								<label for="reseau">Gestion des réseaux sociaux</label>
+								<input type="checkbox" class="chkBox" name="marketing[]" id="sms" value="Envoi SMS" />
+								<label for="sms">Envoi SMS</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" class="chkBox" name="marketing[]" id="googleBusiness" value="Google My Business" />
+								<label for="googleBusiness">Google My Business</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" class="chkBox" name="marketing[]" id="googleAds" value="Campagne Google ADS" />
+								<label for="googleAds">Campagnes Google Ads</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" class="chkBox" name="marketing[]" id="ytPubli" value="Publication Youtube" />
+								<label for="ytPubli">Publication Youtube</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" class="chkBox" name="marketing[]" id="ytAds" value="Campagne YouTube ADS" />
+								<label for="ytAds">Campagnes YouTube Ads</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" class="chkBox" name="marketing[]" id="publiFb" value="Publication Facebook Organique" />
+								<label for="publiFb">Publication Facebook Organique</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" class="chkBox" name="marketing[]" id="fbAds" value="Campagne Facebook Ads" />
+								<label for="fbAds">Campagne Facebook Ads</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" class="chkBox" name="marketing[]" id="publiInsta" value="Publication Instagram Organique" />
+								<label for="publiInsta">Publication Instagram Organique</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" class="chkBox" name="marketing[]" id="instaAds" value="Campagne Instagram Ads" />
+								<label for="instaAds">Campagne Instagram Ads</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" class="chkBox" name="marketing[]" id="pinterest" value="Publication Pinterest" />
+								<label for="pinterest">Publication Pinterest</label>
+							</div>
+							<div class="checkBox">
+								<input type="checkbox" class="chkBox" name="marketing[]" id="pinterestAds" value="Campagne Pinterest Ads" />
+								<label for="pinterestAds">Campagne Pinterest Ads</label>
 							</div>
 						</div>
 					</div>
