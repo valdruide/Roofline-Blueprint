@@ -2,6 +2,13 @@
 	color: rgb(232, 238, 245);
 }
 
+.flexContainer{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	gap: 50px;
+}
+
 .form_section {
 	margin-top: 80px;
 	margin-bottom: 80px;
@@ -97,12 +104,11 @@ hr {
 	border-radius: 16px;
 	background-color: var(--secondaryColor);
 	padding: 30px;
-	width: 55%;
-
+	width: 75%;
 	background: rgb(103 135 135 / 34%);
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.399);
-	backdrop-filter: blur(12px);
-	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(19px);
+	-webkit-backdrop-filter: blur(19px);
 	border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -262,7 +268,10 @@ input[type="radio"]:checked::before {
 	font-weight: 700;
 	cursor: pointer;
 	transition: all 0.2s;
-	width: 100%;
+	width: 50%;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
 }
 
 #btn-form:hover {
