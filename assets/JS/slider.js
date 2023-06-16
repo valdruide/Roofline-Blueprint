@@ -5,7 +5,11 @@ $(document).ready(function(){
     $('.carousel').slick({
         infinite: false,
         dots:true,
-        arrows: false,
+        arrows: true,
         adaptiveHeight: true,
+        appendArrows: $('.arrowDiv'),
+        appendDots: $('.dotDiv'),
+        nextArrow: '<p class="arrow">➡</p>',
+        prevArrow: '<p class="arrow">⬅</p>',
     });
 });
