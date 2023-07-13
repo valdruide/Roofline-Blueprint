@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./assets/CSS/form.css" />
     <link rel="stylesheet" href="./assets/CSS/finalPdf.css" />
     <script>
-        function generatePDF(){
+        document.addEventListener("DOMContentLoaded", (event) => {
             window.jsPDF = window.jspdf.jsPDF;
             let doc = new jsPDF('p', 'pt', 'a4')
             doc.html(document.getElementById('input_data'), {
@@ -16,9 +16,10 @@
                 margin: [10, 0, 10, 0],
                 callback : function(doc){
                     doc.save('Cahier des charges.pdf')
+                    close();
                 },
             });
-        }
+        });
     </script>
 </head>
 <body>
